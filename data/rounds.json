@@ -1,0 +1,292 @@
+[
+  {
+    "id": "orbition-labs-2026-09-22-a",
+    "company": "orbition-labs",
+    "announced_on": "2026-09-22",
+    "kind": "equity",
+    "stage": "A",
+    "amount_inr": 400000000,
+    "amount_usd": 4760000,
+    "currency_original": "INR",
+    "is_undisclosed": false,
+    "investors": [
+      { "slug": "meridian-deep-ventures", "is_lead": true },
+      { "slug": "kalpa-capital", "is_lead": false }
+    ],
+    "sources": [],
+    "sample": true,
+    "note": {
+      "one_liner": "Builds Hall-effect electric thrusters for small satellites.",
+      "core_tech": "Krypton-fed Hall thruster at 300–600 W with an in-house power processing unit.",
+      "trl": 6,
+      "trl_reason": "Ground-tested in vacuum; one flight demo pending.",
+      "technical_risk": "Erosion of the discharge channel limits lifetime, and qualification tests take thousands of hours.",
+      "comparables": ["Bellatrix Aerospace", "ThrustMe", "Exotrail"],
+      "take": "The round covers the flight demo but not lifetime qualification, so expect a bridge or Series B within 18 months.",
+      "written_on": "2026-09-23"
+    }
+  },
+  {
+    "id": "ferrolith-energy-2026-09-15-seed",
+    "company": "ferrolith-energy",
+    "announced_on": "2026-09-15",
+    "kind": "equity",
+    "stage": "seed",
+    "amount_inr": 180000000,
+    "amount_usd": 2140000,
+    "currency_original": "INR",
+    "is_undisclosed": false,
+    "investors": [
+      { "slug": "kalpa-capital", "is_lead": true },
+      { "slug": "arka-industrial-cvc", "is_lead": false }
+    ],
+    "sources": [],
+    "sample": true,
+    "note": {
+      "one_liner": "Makes sodium-ion cells aimed at stationary storage rather than vehicles.",
+      "core_tech": "Prussian-white cathode with hard-carbon anode; drops lithium, cobalt and nickel from the bill of materials.",
+      "trl": 5,
+      "trl_reason": "Pouch cells validated in the lab; pilot line not yet running.",
+      "technical_risk": "Hard-carbon anode supply and first-cycle loss; cycle life at 45 °C ambient is unproven.",
+      "comparables": ["CATL (Na-ion line)", "Natron Energy", "Faradion"],
+      "take": "Enough to build a pilot line and ship sample cells, not to reach volume. The next round depends on hitting cost per kWh at pilot scale.",
+      "written_on": "2026-09-16"
+    }
+  },
+  {
+    "id": "qubitra-systems-2026-09-08-pre-seed",
+    "company": "qubitra-systems",
+    "announced_on": "2026-09-08",
+    "kind": "equity",
+    "stage": "pre-seed",
+    "amount_inr": 60000000,
+    "amount_usd": 714000,
+    "currency_original": "INR",
+    "is_undisclosed": false,
+    "investors": [
+      { "slug": "northstar-angels", "is_lead": true }
+    ],
+    "sources": [],
+    "sample": true,
+    "note": null
+  },
+  {
+    "id": "sutragen-bio-2026-09-02-a",
+    "company": "sutragen-bio",
+    "announced_on": "2026-09-02",
+    "kind": "equity",
+    "stage": "A",
+    "amount_inr": 550000000,
+    "amount_usd": 6550000,
+    "currency_original": "USD",
+    "is_undisclosed": false,
+    "investors": [
+      { "slug": "meridian-deep-ventures", "is_lead": true },
+      { "slug": "trishul-family-office", "is_lead": false }
+    ],
+    "sources": [],
+    "sample": true,
+    "note": {
+      "one_liner": "Uses machine learning to find new antibiotics against drug-resistant bacteria.",
+      "core_tech": "Graph neural networks screen virtual libraries for membrane-permeable scaffolds, followed by wet-lab MIC assays.",
+      "trl": 3,
+      "trl_reason": "Hits validated in vitro; no animal efficacy data yet.",
+      "technical_risk": "Gram-negative permeability and toxicity; most in-silico hits fail in vivo.",
+      "comparables": ["Bugworks", "Phare Bio", "Insilico Medicine"],
+      "take": "Sized for lead optimisation and first in-vivo studies. Clinical work will need a partner or a much larger round.",
+      "written_on": "2026-09-03"
+    }
+  },
+  {
+    "id": "netravue-diagnostics-2026-08-27-seed",
+    "company": "netravue-diagnostics",
+    "announced_on": "2026-08-27",
+    "kind": "equity",
+    "stage": "seed",
+    "amount_inr": 120000000,
+    "amount_usd": 1430000,
+    "currency_original": "INR",
+    "is_undisclosed": false,
+    "investors": [
+      { "slug": "kalpa-capital", "is_lead": true },
+      { "slug": "northstar-angels", "is_lead": false }
+    ],
+    "sources": [],
+    "sample": true,
+    "note": {
+      "one_liner": "Screens for diabetic eye disease from photos taken on cheap fundus cameras.",
+      "core_tech": "Convolutional model trained on multi-site retinal images with on-device inference.",
+      "trl": 7,
+      "trl_reason": "Deployed in pilot clinics; regulatory filing in progress.",
+      "technical_risk": "Accuracy drift across camera models and image quality; needs prospective validation.",
+      "comparables": ["Remidio", "Eyenuk", "IDx (Digital Diagnostics)"],
+      "take": "Fits the step from pilots to regulatory approval. Revenue will depend on a screening-programme contract more than the model.",
+      "written_on": "2026-08-28"
+    }
+  },
+  {
+    "id": "hydrova-2026-08-20-grant",
+    "company": "hydrova",
+    "announced_on": "2026-08-20",
+    "kind": "grant",
+    "stage": "grant",
+    "amount_inr": 30000000,
+    "amount_usd": 357000,
+    "currency_original": "INR",
+    "is_undisclosed": false,
+    "investors": [
+      { "slug": "demo-innovation-grant", "is_lead": true }
+    ],
+    "sources": [],
+    "sample": true,
+    "note": null
+  },
+  {
+    "id": "siliconkar-2026-08-11-b",
+    "company": "siliconkar",
+    "announced_on": "2026-08-11",
+    "kind": "equity",
+    "stage": "B",
+    "amount_inr": 1200000000,
+    "amount_usd": 14300000,
+    "currency_original": "USD",
+    "is_undisclosed": false,
+    "investors": [
+      { "slug": "meridian-deep-ventures", "is_lead": true },
+      { "slug": "arka-industrial-cvc", "is_lead": false },
+      { "slug": "trishul-family-office", "is_lead": false }
+    ],
+    "sources": [],
+    "sample": true,
+    "note": {
+      "one_liner": "Designs power-management chips for electric vehicles and factory equipment.",
+      "core_tech": "BCD-process PMICs and gate drivers, fabbed at foreign foundries and packaged in India.",
+      "trl": 8,
+      "trl_reason": "Two parts in production with design wins at tier-1 suppliers.",
+      "technical_risk": "Automotive qualification cycles are long, and one foundry is a single point of failure.",
+      "comparables": ["Mindgrove", "Navitas", "Texas Instruments (PMIC line)"],
+      "take": "A reasonable size for scaling sales and taping out the next family. Supply-chain diversification is the open question.",
+      "written_on": "2026-08-12"
+    }
+  },
+  {
+    "id": "karyabot-robotics-2026-07-29-seed",
+    "company": "karyabot-robotics",
+    "announced_on": "2026-07-29",
+    "kind": "equity",
+    "stage": "seed",
+    "amount_inr": 90000000,
+    "amount_usd": 1070000,
+    "currency_original": "INR",
+    "is_undisclosed": false,
+    "investors": [
+      { "slug": "arka-industrial-cvc", "is_lead": true }
+    ],
+    "sources": [],
+    "sample": true,
+    "note": null
+  },
+  {
+    "id": "pankh-aero-2026-07-14-a",
+    "company": "pankh-aero",
+    "announced_on": "2026-07-14",
+    "kind": "equity",
+    "stage": "A",
+    "amount_inr": null,
+    "amount_usd": null,
+    "currency_original": null,
+    "is_undisclosed": true,
+    "investors": [
+      { "slug": "trishul-family-office", "is_lead": true }
+    ],
+    "sources": [],
+    "sample": true,
+    "note": null
+  },
+  {
+    "id": "lumora-photonics-2026-06-30-seed",
+    "company": "lumora-photonics",
+    "announced_on": "2026-06-30",
+    "kind": "equity",
+    "stage": "seed",
+    "amount_inr": 150000000,
+    "amount_usd": 1790000,
+    "currency_original": "INR",
+    "is_undisclosed": false,
+    "investors": [
+      { "slug": "meridian-deep-ventures", "is_lead": true },
+      { "slug": "northstar-angels", "is_lead": false }
+    ],
+    "sources": [],
+    "sample": true,
+    "note": null
+  },
+  {
+    "id": "voltgrid-motors-2026-06-18-a",
+    "company": "voltgrid-motors",
+    "announced_on": "2026-06-18",
+    "kind": "equity",
+    "stage": "A",
+    "amount_inr": 300000000,
+    "amount_usd": 3570000,
+    "currency_original": "INR",
+    "is_undisclosed": false,
+    "investors": [
+      { "slug": "kalpa-capital", "is_lead": true }
+    ],
+    "sources": [],
+    "sample": true,
+    "note": null
+  },
+  {
+    "id": "ferrolith-energy-2025-11-10-pre-seed",
+    "company": "ferrolith-energy",
+    "announced_on": "2025-11-10",
+    "kind": "equity",
+    "stage": "pre-seed",
+    "amount_inr": 40000000,
+    "amount_usd": 476000,
+    "currency_original": "INR",
+    "is_undisclosed": false,
+    "investors": [
+      { "slug": "northstar-angels", "is_lead": true }
+    ],
+    "sources": [],
+    "sample": true,
+    "note": null
+  },
+  {
+    "id": "netravue-diagnostics-2025-08-01-grant",
+    "company": "netravue-diagnostics",
+    "announced_on": "2025-08-01",
+    "kind": "grant",
+    "stage": "grant",
+    "amount_inr": 15000000,
+    "amount_usd": 179000,
+    "currency_original": "INR",
+    "is_undisclosed": false,
+    "investors": [
+      { "slug": "demo-innovation-grant", "is_lead": true }
+    ],
+    "sources": [],
+    "sample": true,
+    "note": null
+  },
+  {
+    "id": "sutragen-bio-2025-03-05-seed",
+    "company": "sutragen-bio",
+    "announced_on": "2025-03-05",
+    "kind": "equity",
+    "stage": "seed",
+    "amount_inr": 140000000,
+    "amount_usd": 1670000,
+    "currency_original": "INR",
+    "is_undisclosed": false,
+    "investors": [
+      { "slug": "kalpa-capital", "is_lead": true }
+    ],
+    "sources": [],
+    "sample": true,
+    "note": null
+  }
+]

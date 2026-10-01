@@ -1,0 +1,8 @@
+[
+  { "slug": "meridian-deep-ventures", "name": "Meridian Deep Ventures", "type": "vc", "sample": true },
+  { "slug": "kalpa-capital", "name": "Kalpa Capital", "type": "vc", "sample": true },
+  { "slug": "northstar-angels", "name": "Northstar Angels Network", "type": "angel", "sample": true },
+  { "slug": "arka-industrial-cvc", "name": "Arka Industrial CVC", "type": "cvc", "sample": true },
+  { "slug": "demo-innovation-grant", "name": "Demo State Innovation Grant", "type": "govt", "sample": true },
+  { "slug": "trishul-family-office", "name": "Trishul Family Office", "type": "family_office", "sample": true }
+]

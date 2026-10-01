@@ -1,0 +1,61 @@
+{
+  "verticals": [
+    {
+      "slug": "space-defence",
+      "name": "Space and defence",
+      "subsectors": [
+        { "slug": "launch", "name": "Launch" },
+        { "slug": "satellites-eo", "name": "Satellites / EO" },
+        { "slug": "space-propulsion", "name": "Space propulsion" },
+        { "slug": "drones", "name": "Drones" },
+        { "slug": "defence-electronics", "name": "Defence electronics" }
+      ]
+    },
+    {
+      "slug": "energy-climate",
+      "name": "Energy and climate hardware",
+      "subsectors": [
+        { "slug": "batteries", "name": "Batteries" },
+        { "slug": "hydrogen", "name": "Hydrogen" },
+        { "slug": "fusion-plasma", "name": "Fusion / plasma" },
+        { "slug": "solar-materials", "name": "Solar materials" },
+        { "slug": "ccus", "name": "CCUS" },
+        { "slug": "grid-tech", "name": "Grid tech" }
+      ]
+    },
+    {
+      "slug": "semis-computing",
+      "name": "Semiconductors and computing",
+      "subsectors": [
+        { "slug": "chip-design", "name": "Chip design" },
+        { "slug": "fabs-osat", "name": "Fabs / OSAT" },
+        { "slug": "photonics", "name": "Photonics" },
+        { "slug": "quantum", "name": "Quantum" }
+      ]
+    },
+    {
+      "slug": "advanced-manufacturing",
+      "name": "Advanced manufacturing",
+      "subsectors": [
+        { "slug": "robotics", "name": "Robotics" },
+        { "slug": "advanced-materials", "name": "Advanced materials" },
+        { "slug": "3d-printing", "name": "3D printing" },
+        { "slug": "industrial-iot", "name": "Industrial IoT hardware" }
+      ]
+    },
+    {
+      "slug": "healthtech",
+      "name": "Healthtech (science-led)",
+      "subsectors": [
+        { "slug": "ai-diagnostics", "name": "AI diagnostics / imaging" },
+        { "slug": "medical-devices", "name": "Medical devices" },
+        { "slug": "biotech", "name": "Biotech / drug discovery" },
+        { "slug": "genomics", "name": "Genomics" },
+        { "slug": "digital-therapeutics", "name": "Digital therapeutics" }
+      ]
+    }
+  ],
+  "stages": ["pre-seed", "seed", "A", "B", "C+", "grant", "debt", "acquisition"],
+  "kinds": ["equity", "debt", "grant", "acquisition"],
+  "investor_types": ["vc", "angel", "cvc", "govt", "family_office"]
+}
