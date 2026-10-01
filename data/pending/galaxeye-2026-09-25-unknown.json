@@ -1,0 +1,32 @@
+{
+  "id": "galaxeye-2026-09-25-unknown",
+  "status": "pending",
+  "company_name": "GalaxEye",
+  "company_slug": "galaxeye",
+  "company_description": "Spacetech company developing advanced hardware and satellite technology.",
+  "city": null,
+  "vertical": "space-defence",
+  "subsector": "satellites-eo",
+  "is_adjacent": false,
+  "announced_on": "2026-09-25",
+  "kind": "equity",
+  "stage": "unknown",
+  "amount_inr": 641994000,
+  "amount_usd": 6700000,
+  "currency_original": "USD",
+  "is_undisclosed": false,
+  "investors": [
+    {
+      "name": "RDI Fund",
+      "is_lead": true
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://inc42.com/buzz/from-ultraviolette-automotive-to-galaxeye-indian-startups-raised-over-203-mn-this-week/",
+      "publisher": "Inc42 Funding Galore",
+      "fetched_at": "2026-10-01T19:00:57+00:00"
+    }
+  ],
+  "confidence": 0.6
+}

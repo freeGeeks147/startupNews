@@ -1,0 +1,40 @@
+{
+  "id": "ultraviolette-automotive-2026-09-23-C+",
+  "status": "pending",
+  "company_name": "Ultraviolette Automotive",
+  "company_slug": "ultraviolette-automotive",
+  "company_description": "Manufactures electric vehicles for the consumer market.",
+  "city": null,
+  "vertical": "energy-climate",
+  "subsector": "batteries",
+  "is_adjacent": true,
+  "announced_on": "2026-09-23",
+  "kind": "equity",
+  "stage": "C+",
+  "amount_inr": 8137900000,
+  "amount_usd": 85000000,
+  "currency_original": "USD",
+  "is_undisclosed": false,
+  "investors": [
+    {
+      "name": "Yali Capital",
+      "is_lead": true
+    },
+    {
+      "name": "TDK Ventures",
+      "is_lead": true
+    },
+    {
+      "name": "Lip-Bu Tan",
+      "is_lead": false
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://inc42.com/buzz/from-ultraviolette-automotive-to-galaxeye-indian-startups-raised-over-203-mn-this-week/",
+      "publisher": "Inc42 Funding Galore",
+      "fetched_at": "2026-10-01T19:00:57+00:00"
+    }
+  ],
+  "confidence": 0.7
+}

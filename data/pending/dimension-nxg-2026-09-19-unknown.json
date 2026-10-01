@@ -1,0 +1,32 @@
+{
+  "id": "dimension-nxg-2026-09-19-unknown",
+  "status": "pending",
+  "company_name": "Dimension NXG",
+  "company_slug": "dimension-nxg",
+  "company_description": "XR (extended reality) startup developing smart eyewear and XR devices",
+  "city": null,
+  "vertical": "advanced-manufacturing",
+  "subsector": "advanced-materials",
+  "is_adjacent": false,
+  "announced_on": "2026-09-19",
+  "kind": "equity",
+  "stage": "unknown",
+  "amount_inr": 80000000,
+  "amount_usd": 834376,
+  "currency_original": "INR",
+  "is_undisclosed": false,
+  "investors": [
+    {
+      "name": "Lenskart",
+      "is_lead": true
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://inc42.com/buzz/from-flam-to-verifaix-indian-startups-raised-about-59-mn-this-week/",
+      "publisher": "Inc42 Funding Galore",
+      "fetched_at": "2026-10-01T19:03:46+00:00"
+    }
+  ],
+  "confidence": 0.7
+}

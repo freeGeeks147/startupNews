@@ -1,13 +1,35 @@
 [
-  { "slug": "orbition-labs", "name": "OrbitIon Labs", "website": null, "city": "Bengaluru", "founded_year": 2022, "vertical": "space-defence", "subsector": "space-propulsion", "is_adjacent": false, "description": "Hall-effect electric thrusters for small satellites.", "sample": true },
-  { "slug": "ferrolith-energy", "name": "Ferrolith Energy", "website": null, "city": "Pune", "founded_year": 2023, "vertical": "energy-climate", "subsector": "batteries", "is_adjacent": false, "description": "Sodium-ion cells for stationary storage.", "sample": true },
-  { "slug": "qubitra-systems", "name": "Qubitra Systems", "website": null, "city": "Bengaluru", "founded_year": 2025, "vertical": "semis-computing", "subsector": "quantum", "is_adjacent": false, "description": "Cryogenic control electronics for superconducting qubits.", "sample": true },
-  { "slug": "sutragen-bio", "name": "SutraGen Bio", "website": null, "city": "Hyderabad", "founded_year": 2021, "vertical": "healthtech", "subsector": "biotech", "is_adjacent": false, "description": "ML-guided small-molecule discovery for antimicrobial resistance.", "sample": true },
-  { "slug": "netravue-diagnostics", "name": "Netravue Diagnostics", "website": null, "city": "Chennai", "founded_year": 2023, "vertical": "healthtech", "subsector": "ai-diagnostics", "is_adjacent": false, "description": "Retinal-image screening for diabetic retinopathy on low-cost fundus cameras.", "sample": true },
-  { "slug": "hydrova", "name": "Hydrova", "website": null, "city": "Ahmedabad", "founded_year": 2024, "vertical": "energy-climate", "subsector": "hydrogen", "is_adjacent": false, "description": "Anion-exchange-membrane electrolyzer stacks.", "sample": true },
-  { "slug": "siliconkar", "name": "Siliconkar", "website": null, "city": "Bengaluru", "founded_year": 2019, "vertical": "semis-computing", "subsector": "chip-design", "is_adjacent": false, "description": "Power-management ICs for EV and industrial applications.", "sample": true },
-  { "slug": "karyabot-robotics", "name": "Karyabot Robotics", "website": null, "city": "Delhi NCR", "founded_year": 2024, "vertical": "advanced-manufacturing", "subsector": "robotics", "is_adjacent": false, "description": "Vision-guided welding cells for small fabricators.", "sample": true },
-  { "slug": "pankh-aero", "name": "Pankh Aero", "website": null, "city": "Hyderabad", "founded_year": 2020, "vertical": "space-defence", "subsector": "drones", "is_adjacent": false, "description": "Long-endurance fixed-wing VTOL drones for surveillance.", "sample": true },
-  { "slug": "lumora-photonics", "name": "Lumora Photonics", "website": null, "city": "Mumbai", "founded_year": 2024, "vertical": "semis-computing", "subsector": "photonics", "is_adjacent": false, "description": "Silicon-photonics transceivers for data-centre interconnects.", "sample": true },
-  { "slug": "voltgrid-motors", "name": "Voltgrid Motors", "website": null, "city": "Chennai", "founded_year": 2021, "vertical": "energy-climate", "subsector": "batteries", "is_adjacent": true, "description": "Electric three-wheeler brand that buys, rather than builds, its battery packs.", "sample": true }
+  {
+    "slug": "beijan",
+    "name": "Beijan",
+    "website": null,
+    "city": "",
+    "founded_year": null,
+    "vertical": "space-defence",
+    "subsector": "defence-electronics",
+    "is_adjacent": false,
+    "description": "Defence technology company specializing in defence electronics and systems"
+  },
+  {
+    "slug": "dheyatech",
+    "name": "DheyaTech",
+    "website": null,
+    "city": "",
+    "founded_year": null,
+    "vertical": "space-defence",
+    "subsector": "drones",
+    "is_adjacent": false,
+    "description": "Aerial vehicles and drones manufacturer for B2B applications"
+  },
+  {
+    "slug": "verifaix",
+    "name": "VerifAIX",
+    "website": null,
+    "city": "",
+    "founded_year": null,
+    "vertical": "semis-computing",
+    "subsector": "chip-design",
+    "is_adjacent": false,
+    "description": "Semiconductor chip design company for advanced hardware applications"
+  }
 ]
