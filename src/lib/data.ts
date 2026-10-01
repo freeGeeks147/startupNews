@@ -53,6 +53,8 @@ export interface Round {
   investors: { slug: string; is_lead: boolean }[];
   sources: { url: string; publisher: string }[];
   sample?: boolean;
+  /** false = auto-published by the weekly job and not yet checked by a person. */
+  reviewed?: boolean;
   note: Note | null;
 }
 
@@ -124,6 +126,7 @@ export interface DealRow {
   amountUsd: number | null;
   investors: { slug: string; name: string; isLead: boolean }[];
   oneLiner: string | null;
+  unreviewed: boolean;
 }
 
 export function dealRows(list: Round[] = rounds): DealRow[] {
@@ -148,7 +151,8 @@ export function dealRows(list: Round[] = rounds): DealRow[] {
         name: getInvestor(i.slug)?.name ?? i.slug,
         isLead: i.is_lead,
       })),
-      oneLiner: r.note?.one_liner ?? null,
+      oneLiner: r.note?.one_liner ?? c?.description ?? null,
+      unreviewed: r.reviewed === false,
     };
   });
 }

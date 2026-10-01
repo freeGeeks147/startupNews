@@ -50,7 +50,14 @@ export default async function DealPage({ params }: Params) {
         <span className="badge">{c.city}</span>
         {c.is_adjacent && <span className="badge">adjacent</span>}
         {r.sample && <span className="badge">sample record</span>}
+        {r.reviewed === false && <span className="badge">unreviewed</span>}
       </div>
+
+      {r.reviewed === false && (
+        <p className="card small muted">
+          These details were extracted automatically from the source below and haven&apos;t been checked by a person yet.
+        </p>
+      )}
 
       <div className="facts">
         <div>

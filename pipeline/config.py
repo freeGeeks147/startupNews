@@ -17,13 +17,15 @@ SEEN_FILE = STATE / "seen.json"
 
 MODEL = "claude-haiku-4-5"
 
-# RSS feeds to poll. Verify each URL before relying on it; a failing feed is logged and skipped.
+# RSS feeds to poll (checked 1 Oct 2026). Most keep only ~1 week of items, so the ingest runs
+# daily even though the site publishes weekly. A failing feed is logged and skipped.
 FEEDS = [
-    {"publisher": "Entrackr", "url": "https://entrackr.com/feed"},
+    # Weekly roundup; the feed reaches back ~5 months, so the first run doubles as a backfill.
+    {"publisher": "Inc42 Funding Galore", "url": "https://inc42.com/tag/funding-galore/feed/"},
     {"publisher": "Inc42", "url": "https://inc42.com/feed/"},
-    {"publisher": "YourStory", "url": "https://yourstory.com/feed"},
-    {"publisher": "Indian Startup News", "url": "https://indianstartupnews.com/feed"},
-    {"publisher": "PIB", "url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3"},
+    {"publisher": "Entrackr", "url": "https://entrackr.com/rss"},
+    {"publisher": "YourStory", "url": "https://yourstory.com/category/funding/feed"},
+    {"publisher": "Indian Startup News", "url": "https://indianstartupnews.com/rss"},
 ]
 
 # Only articles whose title matches one of these are sent to the LLM, to keep costs down.
@@ -41,6 +43,12 @@ DEDUPE_WINDOW_DAYS = 14
 
 # Minimum classifier confidence for a deal to enter the review queue.
 MIN_CONFIDENCE = 0.5
+
+# Weekly publish: pending deals at or above this confidence go live automatically, marked
+# "unreviewed". Lower-confidence deals wait for manual review. Set AUTO_PUBLISH = False to
+# publish only what you approve by hand.
+AUTO_PUBLISH = True
+AUTO_PUBLISH_MIN_CONFIDENCE = 0.8
 
 
 def load_json(path: Path, default):

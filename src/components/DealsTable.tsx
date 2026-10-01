@@ -206,6 +206,11 @@ export default function DealsTable({ rows, verticals, compact = false }: Props) 
                     {r.company}
                   </Link>
                   {r.isAdjacent && <span className="badge" style={{ marginLeft: 6 }}>adjacent</span>}
+                  {r.unreviewed && (
+                    <span className="badge" style={{ marginLeft: 6 }} title="Extracted automatically; not yet checked by a person">
+                      unreviewed
+                    </span>
+                  )}
                   <div className="deal-sub">{r.oneLiner ?? r.city}</div>
                 </td>
                 <td>{r.subsectorName}</td>

@@ -44,7 +44,7 @@ def extract_deals(title: str, text: str, published: str | None) -> list[Extracte
     try:
         response = _get_client().messages.parse(
             model=config.MODEL,
-            max_tokens=8000,
+            max_tokens=16000,
             system=SYSTEM,
             messages=[{"role": "user", "content": user}],
             output_format=ArticleExtraction,

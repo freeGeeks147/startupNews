@@ -33,8 +33,15 @@ def _looks_like_funding(title: str) -> bool:
 
 def new_articles(seen: set[str]) -> list[Article]:
     out: list[Article] = []
+    client = httpx.Client(headers={"User-Agent": config.USER_AGENT}, timeout=20, follow_redirects=True)
     for feed in config.FEEDS:
-        parsed = feedparser.parse(feed["url"], agent=config.USER_AGENT)
+        try:
+            resp = client.get(feed["url"])
+            resp.raise_for_status()
+        except httpx.HTTPError as exc:
+            print(f"  ! feed failed: {feed['publisher']} ({exc})")
+            continue
+        parsed = feedparser.parse(resp.content)
         if parsed.bozo and not parsed.entries:
             print(f"  ! feed failed: {feed['publisher']} ({parsed.bozo_exception})")
             continue
@@ -88,5 +95,19 @@ class PoliteFetcher:
         root = tree.css_first("article") or tree.css_first("main") or tree.body
         if root is None:
             return None
-        paragraphs = [p.text(strip=True) for p in root.css("p, li, h2, h3")]
-        return "\n".join(p for p in paragraphs if p)
+        # Weekly roundups (e.g. Inc42 Funding Galore) list their deals in a table, so keep
+        # table rows as "cell | cell | ..." lines alongside the prose.
+        lines = []
+        for node in root.css("p, li, h2, h3, tr"):
+            if node.tag == "tr":
+                lines.append(" | ".join(c.text(strip=True) for c in node.css("th, td")))
+            elif not any(parent.tag == "td" or parent.tag == "th" for parent in _ancestors(node)):
+                lines.append(node.text(strip=True))
+        return "\n".join(line for line in lines if line)
+
+
+def _ancestors(node):
+    parent = node.parent
+    while parent is not None:
+        yield parent
+        parent = parent.parent

@@ -4,3 +4,4 @@ feedparser>=6.0
 selectolax>=0.3
 rapidfuzz>=3.0
 pydantic>=2.7
+truststore>=0.9

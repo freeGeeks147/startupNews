@@ -6,6 +6,8 @@ Usage:
   python -m pipeline.review approve ID [ID ...]
   python -m pipeline.review reject ID [ID ...]
   python -m pipeline.review note ID        # prompts for the six note fields
+  python -m pipeline.review unreviewed     # auto-published rounds nobody has checked yet
+  python -m pipeline.review verify ID [ID ...]
 
 Before approving, fix anything wrong by editing data/pending/ID.json directly.
 """
@@ -46,17 +48,24 @@ def cmd_show(args) -> None:
     print(json.dumps(_load_pending(args.ids[0]), indent=2, ensure_ascii=False))
 
 
-def cmd_approve(args) -> None:
+def approve_records(ids: list[str], reviewed: bool) -> list[str]:
+    """Move pending rounds into data/*.json. `reviewed=False` marks them as auto-published."""
     companies = config.load_json(config.COMPANIES_FILE, [])
     investors = config.load_json(config.INVESTORS_FILE, [])
     rounds = config.load_json(config.ROUNDS_FILE, [])
     company_slugs = {c["slug"] for c in companies}
     investor_by_slug = {i["slug"]: i for i in investors}
+    round_ids = {r["id"] for r in rounds}
+    approved: list[str] = []
 
-    for rid in args.ids:
+    for rid in ids:
         r = _load_pending(rid)
         if not r.get("announced_on"):
             print(f"! {rid}: set announced_on before approving")
+            continue
+        if rid in round_ids:
+            print(f"! {rid}: already published; dropping duplicate from queue")
+            _pending_path(rid).unlink()
             continue
         if r["company_slug"] not in company_slugs:
             companies.append({
@@ -94,14 +103,40 @@ def cmd_approve(args) -> None:
             "is_undisclosed": r["is_undisclosed"],
             "investors": round_investors,
             "sources": [{"url": s["url"], "publisher": s["publisher"]} for s in r["sources"]],
+            "reviewed": reviewed,
             "note": None,
         })
+        round_ids.add(rid)
         _pending_path(rid).unlink()
-        print(f"✓ approved {rid}")
+        approved.append(rid)
+        print(f"✓ {'approved' if reviewed else 'auto-published'} {rid}")
 
     config.save_json(config.COMPANIES_FILE, companies)
     config.save_json(config.INVESTORS_FILE, investors)
     config.save_json(config.ROUNDS_FILE, rounds)
+    return approved
+
+
+def cmd_approve(args) -> None:
+    approve_records(args.ids, reviewed=True)
+
+
+def cmd_verify(args) -> None:
+    """Mark auto-published rounds as checked by a person (removes the "Unreviewed" badge)."""
+    rounds = config.load_json(config.ROUNDS_FILE, [])
+    for r in rounds:
+        if r["id"] in args.ids:
+            r["reviewed"] = True
+            print(f"✓ verified {r['id']}")
+    config.save_json(config.ROUNDS_FILE, rounds)
+
+
+def cmd_unreviewed(_args) -> None:
+    rounds = [r for r in config.load_json(config.ROUNDS_FILE, []) if r.get("reviewed") is False]
+    if not rounds:
+        print("No unreviewed published rounds.")
+    for r in rounds:
+        print(f"{r['id']}  ({r['sources'][0]['url'] if r['sources'] else 'no source'})")
 
 
 def cmd_reject(args) -> None:
@@ -147,12 +182,21 @@ def cmd_note(args) -> None:
 
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("command", choices=["list", "show", "approve", "reject", "note"])
+    commands = {
+        "list": cmd_list,
+        "show": cmd_show,
+        "approve": cmd_approve,
+        "reject": cmd_reject,
+        "note": cmd_note,
+        "verify": cmd_verify,
+        "unreviewed": cmd_unreviewed,
+    }
+    ap.add_argument("command", choices=list(commands))
     ap.add_argument("ids", nargs="*")
     args = ap.parse_args()
-    if args.command != "list" and not args.ids:
+    if args.command not in ("list", "unreviewed") and not args.ids:
         ap.error(f"{args.command} needs at least one ID")
-    {"list": cmd_list, "show": cmd_show, "approve": cmd_approve, "reject": cmd_reject, "note": cmd_note}[args.command](args)
+    commands[args.command](args)
 
 
 if __name__ == "__main__":
