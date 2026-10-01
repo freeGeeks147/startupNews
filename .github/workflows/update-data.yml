@@ -61,7 +61,7 @@ jobs:
       - name: Collect and extract deals
         id: collect
         if: steps.key.outputs.ok == 'true'
-        timeout-minutes: 30
+        timeout-minutes: 60
         run: python -m pipeline.run
         env:
           PYTHONUNBUFFERED: "1"

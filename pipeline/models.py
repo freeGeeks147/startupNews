@@ -50,5 +50,5 @@ class ExtractedDeal(BaseModel):
 
 class ArticleExtraction(BaseModel):
     deals: list[ExtractedDeal] = Field(
-        description="Every funding round, grant or acquisition of an Indian company announced in the article"
+        description="In-scope funding rounds, grants or acquisitions of Indian companies announced in the article"
     )

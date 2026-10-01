@@ -11,6 +11,7 @@ import json
 import os
 import shutil
 import subprocess
+import time
 
 from pydantic import ValidationError
 
@@ -19,19 +20,24 @@ from .models import ArticleExtraction, ExtractedDeal
 
 SYSTEM = """You extract startup funding facts from Indian news articles for a deeptech and healthtech funding database.
 
-Return every funding round, debt round, government grant or acquisition of an Indian company that the article announces. Roundup articles often list many deals, sometimes as table rows written "cell | cell | ..."; return each one. Ignore deals that are only mentioned as background.
+Find every funding round, debt round, government grant or acquisition of an Indian company that the article announces. Roundup articles often list many deals, sometimes as table rows written "cell | cell | ..."; check each one. Ignore deals that are only mentioned as background.
 
-Use only facts stated in the article. If a field is not stated, use null (or "unknown" for stage). Do not guess amounts.
+Return ONLY the in-scope deals (including adjacent ones). Leave out-of-scope deals out of the response entirely; most roundup deals are out of scope, and an empty list is a normal answer.
 
-Classify each company:
-- In scope: the company's core value depends on science, hardware or defensible IP.
+In scope means the company's core value depends on science, hardware or defensible IP:
   space-defence: launch, satellites-eo, space-propulsion, drones, defence-electronics
   energy-climate: batteries, hydrogen, fusion-plasma, solar-materials, ccus, grid-tech
   semis-computing: chip-design, fabs-osat, photonics, quantum
   advanced-manufacturing: robotics, advanced-materials, 3d-printing, industrial-iot
   healthtech: ai-diagnostics, medical-devices, biotech, genomics, digital-therapeutics
-- out_of_scope (subsector "none"): pure SaaS, consumer apps, fintech, D2C, quick commerce, telemedicine marketplaces, edtech, and anything else without a science or hardware core.
-- is_adjacent: true when the company sits in a vertical but buys rather than builds the core technology (for example an EV brand that buys its battery packs).
+Out of scope: pure SaaS, AI software without a hardware or science core, consumer apps, fintech, D2C, quick commerce, telemedicine marketplaces, edtech.
+is_adjacent: true when the company sits in a vertical but buys rather than builds the core technology (for example an EV brand that buys its battery packs).
+
+confidence: how sure you are that the deal belongs in its vertical and subsector. Use 0.9 or above when the company's business plainly matches (a satellite maker in satellites-eo), 0.7-0.85 when it fits but the article says little about the technology, and below 0.7 only when it might not belong at all.
+
+Use only facts stated in the article. If a field is not stated, use null. Do not guess amounts.
+
+Stage mapping: "Pre-Seed" -> pre-seed; "Seed", "Angel", "Pre-Series A" -> seed; "Series A" (including A1, extensions, bridges to A) -> A; "Series B" -> B; "Series C" or later, "Pre-IPO" -> C+; grants -> grant; debt or venture debt -> debt; acquisitions -> acquisition. Use "unknown" only when no stage is given at all.
 
 For amounts, copy the number and unit as written: "Rs 40 crore" is amount_value 40, amount_unit "crore", currency "INR"; "$4.5 million" or "$4.5 Mn" is 4.5, "million", "USD"."""
 
@@ -83,7 +89,7 @@ def _claude_bin() -> str:
     return path
 
 
-CLAUDE_CODE_TIMEOUT = 180  # seconds per article
+CLAUDE_CODE_TIMEOUT = 300  # seconds per article
 _consecutive_failures = 0
 
 
@@ -121,7 +127,8 @@ def check_available() -> None:
         out = _run_claude("Reply with the single word OK.", "ping", timeout=90)
     except subprocess.TimeoutExpired:
         raise ExtractionUnavailable("Claude Code did not answer a 1-word test prompt within 90s")
-    print(f"Claude Code check: {str(out.get('result', '')).strip()[:40]!r}")
+    models = ", ".join(out.get("modelUsage", {}) or {}) or "unknown"
+    print(f"Claude Code check: {str(out.get('result', '')).strip()[:40]!r} (model: {models})")
 
 
 def _parse_json_object(text: str) -> dict | None:
@@ -143,15 +150,17 @@ def _call_claude_code(user: str) -> ArticleExtraction | None:
         + "\n\nRespond with a single JSON object and nothing else, matching this JSON Schema:\n"
         + schema
     )
+    started = time.monotonic()
     try:
         out = _run_claude(system, user, timeout=CLAUDE_CODE_TIMEOUT)
     except subprocess.TimeoutExpired:
         _consecutive_failures += 1
         print(f"  ! Claude Code timed out after {CLAUDE_CODE_TIMEOUT}s; skipping article")
-        if _consecutive_failures >= 2:
-            raise ExtractionUnavailable("Claude Code timed out twice in a row")
+        if _consecutive_failures >= 3:
+            raise ExtractionUnavailable("Claude Code timed out three times in a row")
         return None
     _consecutive_failures = 0
+    print(f"  ({time.monotonic() - started:.0f}s)")
 
     payload = _parse_json_object(str(out.get("result", "")))
     if payload is None:
