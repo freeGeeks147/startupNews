@@ -14,7 +14,7 @@ from datetime import datetime, timezone
 
 from . import config
 from .dedupe import find_match
-from .extract import extract_deals
+from .extract import ExtractionUnavailable, backend, extract_deals
 from .fetch import Article, PoliteFetcher, new_articles, url_hash
 from .normalize import amounts, slugify
 
@@ -47,13 +47,23 @@ def process(articles: list[Article], dry_run: bool) -> None:
     rounds_changed = False
     created = merged = 0
 
+    if len(articles) > config.MAX_ARTICLES_PER_RUN:
+        print(f"Processing {config.MAX_ARTICLES_PER_RUN} of {len(articles)}; the rest wait for the next run.")
+        articles = articles[: config.MAX_ARTICLES_PER_RUN]
+
     for art in articles:
         print(f"- {art.publisher}: {art.title}")
         text = fetcher.text(art.url)
-        seen.add(url_hash(art.url))
         if not text:
+            seen.add(url_hash(art.url))
             continue
-        deals = extract_deals(art.title, text, art.published)
+        try:
+            deals = extract_deals(art.title, text, art.published)
+        except ExtractionUnavailable as exc:
+            # Leave this and later articles unseen so the next run picks them up.
+            print(f"  ! stopping early, Claude unavailable: {exc}")
+            break
+        seen.add(url_hash(art.url))
         now = datetime.now(timezone.utc).isoformat(timespec="seconds")
         source = {"url": art.url, "publisher": art.publisher, "fetched_at": now}
 
@@ -129,7 +139,7 @@ def main() -> None:
     else:
         seen = set(config.load_json(config.SEEN_FILE, []))
         articles = new_articles(seen)
-    print(f"{len(articles)} candidate articles")
+    print(f"{len(articles)} candidate articles (Claude via {backend()})")
     process(articles, args.dry_run)
 
 

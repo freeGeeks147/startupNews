@@ -4,7 +4,10 @@ name: Update data
 # about a week of items, so this has to run more often than the site publishes).
 # Sundays: publish confident deals, then redeploy the site.
 # Run it by hand from the Actions tab; tick "publish" to push data live immediately.
-# Does nothing until the ANTHROPIC_API_KEY repository secret is set.
+#
+# Auth: CLAUDE_CODE_OAUTH_TOKEN uses your Claude Pro subscription (same token as indiacwg.com;
+# create one with `claude setup-token`). An ANTHROPIC_API_KEY secret, if set, is used instead.
+# Does nothing until one of the two secrets is set.
 
 on:
   schedule:
@@ -31,8 +34,8 @@ jobs:
       - name: Check for API key
         id: key
         run: |
-          if [ -z "${{ secrets.ANTHROPIC_API_KEY }}" ]; then
-            echo "::warning::ANTHROPIC_API_KEY secret is not set, so no data was collected. Add it under Settings > Secrets and variables > Actions."
+          if [ -z "${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}" ] && [ -z "${{ secrets.ANTHROPIC_API_KEY }}" ]; then
+            echo "::warning::No CLAUDE_CODE_OAUTH_TOKEN secret is set, so no data was collected. Add it under Settings > Secrets and variables > Actions."
             echo "ok=false" >> "$GITHUB_OUTPUT"
           else
             echo "ok=true" >> "$GITHUB_OUTPUT"
@@ -51,10 +54,15 @@ jobs:
       - if: steps.key.outputs.ok == 'true'
         run: pip install -r pipeline/requirements.txt
 
+      - name: Install Claude Code
+        if: steps.key.outputs.ok == 'true'
+        run: npm install -g @anthropic-ai/claude-code
+
       - name: Collect and extract deals
         if: steps.key.outputs.ok == 'true'
         run: python -m pipeline.run
         env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
       - name: Decide whether to publish

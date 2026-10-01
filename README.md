@@ -38,7 +38,8 @@ npm run build      # static site in out/
 
 ```bash
 pip install -r pipeline/requirements.txt
-export ANTHROPIC_API_KEY=...           # PowerShell: $env:ANTHROPIC_API_KEY="..."
+# Claude access: either be logged in to the Claude Code CLI (`claude` → /login, uses your
+# subscription) or set ANTHROPIC_API_KEY (pay per use; takes priority when set).
 
 python -m pipeline.run --dry-run --url https://example.com/some-funding-article   # test one article
 python -m pipeline.run                 # poll RSS feeds in pipeline/config.py
@@ -50,13 +51,20 @@ python -m pipeline.review unreviewed   # auto-published deals to check
 python -m pipeline.review verify <id>  # remove the "unreviewed" badge
 ```
 
-Extraction uses `claude-haiku-4-5` with structured outputs, validated by Pydantic. Amounts are converted to INR and USD at the announcement-date rate (Frankfurter / ECB rates). Only facts and source links are stored, never article text.
+Extraction uses Claude Haiku with a JSON schema, validated by Pydantic. At most 40 articles go to Claude per run (`MAX_ARTICLES_PER_RUN`), so the first-run backfill spreads over a couple of days and stays inside a Pro plan's usage window. If a usage limit is hit, the run stops and the remaining articles are retried next time. Amounts are converted to INR and USD at the announcement-date rate (Frankfurter / ECB rates). Only facts and source links are stored, never article text.
 
 ## Deploy on GitHub Pages
 
 1. Repo **Settings → Pages → Build and deployment → Source: GitHub Actions**.
 2. Push to `main`. The site appears at `https://freegeeks147.github.io/startupNews/`.
-3. To turn on real data, add an `ANTHROPIC_API_KEY` secret under **Settings → Secrets and variables → Actions**, then run **Actions → Update data**.
+3. To turn on real data, add a `CLAUDE_CODE_OAUTH_TOKEN` secret under **Settings → Secrets and variables → Actions**, then run **Actions → Update data**.
+   The token uses your Claude Pro subscription (no API billing). Create one with:
+   ```bash
+   npm install -g @anthropic-ai/claude-code
+   claude setup-token
+   ```
+   The same token can be shared with other repos (e.g. indiacwg.com). If you'd rather pay per use,
+   add an `ANTHROPIC_API_KEY` secret instead; it takes priority when present.
 
 ## Moving to a custom domain later
 

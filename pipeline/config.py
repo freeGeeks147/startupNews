@@ -15,7 +15,12 @@ TAXONOMY_FILE = DATA / "taxonomy.json"
 ALIASES_FILE = DATA / "investor_aliases.json"
 SEEN_FILE = STATE / "seen.json"
 
-MODEL = "claude-haiku-4-5"
+MODEL = "claude-haiku-4-5"            # used with ANTHROPIC_API_KEY
+CLAUDE_CODE_MODEL = "haiku"           # used via the Claude Code CLI on your subscription
+
+# Articles sent to Claude per run. Keeps each run well inside a Pro plan's usage window;
+# anything left over is picked up by the next daily run.
+MAX_ARTICLES_PER_RUN = 40
 
 # RSS feeds to poll (checked 1 Oct 2026). Most keep only ~1 week of items, so the ingest runs
 # daily even though the site publishes weekly. A failing feed is logged and skipped.
