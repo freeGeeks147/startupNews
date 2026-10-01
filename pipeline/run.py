@@ -14,7 +14,7 @@ from datetime import datetime, timezone
 
 from . import config
 from .dedupe import find_match
-from .extract import ExtractionUnavailable, backend, extract_deals
+from .extract import ExtractionUnavailable, backend, check_available, extract_deals
 from .fetch import Article, PoliteFetcher, new_articles, url_hash
 from .normalize import amounts, slugify
 
@@ -64,6 +64,9 @@ def process(articles: list[Article], dry_run: bool) -> None:
             print(f"  ! stopping early, Claude unavailable: {exc}")
             break
         seen.add(url_hash(art.url))
+        if not dry_run:
+            # Save progress per article so an interrupted run doesn't redo finished work.
+            config.save_json(config.SEEN_FILE, sorted(seen))
         now = datetime.now(timezone.utc).isoformat(timespec="seconds")
         source = {"url": art.url, "publisher": art.publisher, "fetched_at": now}
 
@@ -140,6 +143,11 @@ def main() -> None:
         seen = set(config.load_json(config.SEEN_FILE, []))
         articles = new_articles(seen)
     print(f"{len(articles)} candidate articles (Claude via {backend()})")
+    if articles:
+        try:
+            check_available()
+        except ExtractionUnavailable as exc:
+            raise SystemExit(f"Claude is not reachable, nothing processed: {exc}")
     process(articles, args.dry_run)
 
 

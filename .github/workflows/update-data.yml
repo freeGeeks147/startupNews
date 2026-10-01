@@ -59,15 +59,18 @@ jobs:
         run: npm install -g @anthropic-ai/claude-code
 
       - name: Collect and extract deals
+        id: collect
         if: steps.key.outputs.ok == 'true'
+        timeout-minutes: 30
         run: python -m pipeline.run
         env:
+          PYTHONUNBUFFERED: "1"
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
       - name: Decide whether to publish
         id: when
-        if: steps.key.outputs.ok == 'true'
+        if: always() && steps.key.outputs.ok == 'true'
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "publish=${{ inputs.publish }}" >> "$GITHUB_OUTPUT"
@@ -78,12 +81,15 @@ jobs:
           fi
 
       - name: Publish confident deals
-        if: steps.when.outputs.publish == 'true'
+        if: always() && steps.when.outputs.publish == 'true'
         run: python -m pipeline.publish
+        env:
+          PYTHONUNBUFFERED: "1"
 
+      # Runs even if collection stopped part-way, so finished articles aren't redone.
       - name: Commit data
         id: commit
-        if: steps.key.outputs.ok == 'true'
+        if: always() && steps.key.outputs.ok == 'true'
         run: |
           git config user.name "deepfund-bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -98,7 +104,7 @@ jobs:
 
       # Pushes made by this workflow don't trigger other workflows, so start the deploy explicitly.
       - name: Redeploy site
-        if: steps.when.outputs.publish == 'true' && steps.commit.outputs.changed == 'true'
+        if: always() && steps.when.outputs.publish == 'true' && steps.commit.outputs.changed == 'true'
         run: gh workflow run deploy.yml --ref main
         env:
           GH_TOKEN: ${{ github.token }}

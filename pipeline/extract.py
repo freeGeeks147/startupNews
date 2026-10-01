@@ -83,50 +83,80 @@ def _claude_bin() -> str:
     return path
 
 
-def _call_claude_code(user: str) -> ArticleExtraction | None:
-    schema = json.dumps(ArticleExtraction.model_json_schema())
+CLAUDE_CODE_TIMEOUT = 180  # seconds per article
+_consecutive_failures = 0
+
+
+def _run_claude(system: str, prompt: str, timeout: int) -> dict:
+    """Run `claude -p` once and return its JSON envelope. Raises ExtractionUnavailable on hard failure."""
     cmd = [
         _claude_bin(), "-p",
         "--model", config.CLAUDE_CODE_MODEL,
         "--tools", "",
-        "--system-prompt", SYSTEM,
-        "--json-schema", schema,
+        "--system-prompt", system,
         "--output-format", "json",
         "--no-session-persistence",
     ]
     # An empty API key variable (e.g. an unset GitHub secret) must not shadow the subscription token.
     env = {k: v for k, v in os.environ.items() if not (k == "ANTHROPIC_API_KEY" and not v)}
-    try:
-        # The article goes in on stdin to stay clear of command-line length limits.
-        proc = subprocess.run(
-            cmd, input=user, capture_output=True, text=True, encoding="utf-8", timeout=600, env=env
-        )
-    except subprocess.TimeoutExpired:
-        print("  ! Claude Code timed out; skipping article")
-        return None
-
+    # The prompt goes in on stdin to stay clear of command-line length limits.
+    proc = subprocess.run(
+        cmd, input=prompt, capture_output=True, text=True, encoding="utf-8", timeout=timeout, env=env
+    )
     try:
         out = json.loads(proc.stdout)
     except json.JSONDecodeError:
         detail = (proc.stderr or proc.stdout).strip()[:300]
         raise ExtractionUnavailable(f"Claude Code failed (exit {proc.returncode}): {detail}")
-
     if out.get("is_error"):
-        message = str(out.get("result") or out.get("subtype") or "unknown error")
-        lowered = message.lower()
-        if any(k in lowered for k in ("limit", "auth", "login", "credit", "overloaded", "token")):
-            raise ExtractionUnavailable(message[:300])
-        print(f"  ! Claude Code error: {message[:200]}")
+        raise ExtractionUnavailable(str(out.get("result") or out.get("subtype") or "unknown error")[:300])
+    return out
+
+
+def check_available() -> None:
+    """Fail fast with a clear message if Claude can't be reached, instead of hanging on article 1."""
+    if backend() == "api":
+        return
+    try:
+        out = _run_claude("Reply with the single word OK.", "ping", timeout=90)
+    except subprocess.TimeoutExpired:
+        raise ExtractionUnavailable("Claude Code did not answer a 1-word test prompt within 90s")
+    print(f"Claude Code check: {str(out.get('result', '')).strip()[:40]!r}")
+
+
+def _parse_json_object(text: str) -> dict | None:
+    """Pull the JSON object out of a reply, tolerating ```json fences or stray text around it."""
+    start, end = text.find("{"), text.rfind("}")
+    if start == -1 or end <= start:
+        return None
+    try:
+        return json.loads(text[start : end + 1])
+    except json.JSONDecodeError:
         return None
 
-    payload = out.get("structured_output")
+
+def _call_claude_code(user: str) -> ArticleExtraction | None:
+    global _consecutive_failures
+    schema = json.dumps(ArticleExtraction.model_json_schema())
+    system = (
+        SYSTEM
+        + "\n\nRespond with a single JSON object and nothing else, matching this JSON Schema:\n"
+        + schema
+    )
+    try:
+        out = _run_claude(system, user, timeout=CLAUDE_CODE_TIMEOUT)
+    except subprocess.TimeoutExpired:
+        _consecutive_failures += 1
+        print(f"  ! Claude Code timed out after {CLAUDE_CODE_TIMEOUT}s; skipping article")
+        if _consecutive_failures >= 2:
+            raise ExtractionUnavailable("Claude Code timed out twice in a row")
+        return None
+    _consecutive_failures = 0
+
+    payload = _parse_json_object(str(out.get("result", "")))
     if payload is None:
-        # Fall back to the text result if the CLI version doesn't return structured_output.
-        try:
-            payload = json.loads(out.get("result", ""))
-        except (TypeError, json.JSONDecodeError):
-            print("  ! no structured output returned; skipping article")
-            return None
+        print("  ! reply was not valid JSON; skipping article")
+        return None
     try:
         return ArticleExtraction.model_validate(payload)
     except ValidationError as exc:
