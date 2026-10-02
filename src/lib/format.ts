@@ -26,6 +26,7 @@ export function formatDate(iso: string): string {
 export function stageLabel(stage: string): string {
   if (stage === "A" || stage === "B" || stage === "C+") return `Series ${stage}`;
   if (stage === "pre-seed") return "Pre-seed";
+  if (stage === "unknown") return "Funding round";
   return stage.charAt(0).toUpperCase() + stage.slice(1);
 }
 

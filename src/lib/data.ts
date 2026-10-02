@@ -109,6 +109,55 @@ export function coInvestors(slug: string): { investor: Investor; count: number }
 
 export const hasSampleData = rounds.some((r) => r.sample);
 
+const disclosed = (r: Round) => (r.is_undisclosed ? 0 : (r.amount_inr ?? 0));
+const inNiche = (r: Round) => !getCompany(r.company)?.is_adjacent;
+
+/** Disclosed funding and deal count per vertical, largest first. */
+export function sectorTotals(): { vertical: Vertical; total: number; count: number }[] {
+  return verticals
+    .map((v) => {
+      const rs = roundsForVertical(v.slug).filter(inNiche);
+      return { vertical: v, total: rs.reduce((s, r) => s + disclosed(r), 0), count: rs.length };
+    })
+    .sort((a, b) => b.total - a.total || b.count - a.count);
+}
+
+/** Investors ranked by number of deals joined. */
+export function topInvestors(n: number): { investor: Investor; count: number; leads: number }[] {
+  return investors
+    .map((i) => {
+      const rs = roundsForInvestor(i.slug);
+      const leads = rs.filter((r) => r.investors.some((x) => x.slug === i.slug && x.is_lead)).length;
+      return { investor: i, count: rs.length, leads };
+    })
+    .filter((x) => x.count > 0)
+    .sort((a, b) => b.count - a.count || b.leads - a.leads || a.investor.name.localeCompare(b.investor.name))
+    .slice(0, n);
+}
+
+export const biggestRound = (list: Round[] = rounds) =>
+  list.filter(inNiche).reduce<Round | undefined>((best, r) => (!best || disclosed(r) > disclosed(best) ? r : best), undefined);
+
+/** Other companies in the same sub-sector, falling back to the same vertical. */
+export function similarCompanies(slug: string, n = 4): Company[] {
+  const c = getCompany(slug);
+  if (!c) return [];
+  const others = companies.filter((x) => x.slug !== slug);
+  const same = others.filter((x) => x.subsector === c.subsector);
+  const near = others.filter((x) => x.subsector !== c.subsector && x.vertical === c.vertical);
+  return [...same, ...near].slice(0, n);
+}
+
+/** Hostname for display, e.g. "galaxeye.space". */
+export function domainOf(url: string | null): string | null {
+  if (!url) return null;
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return null;
+  }
+}
+
 /** Flat row used by the client-side deals table. */
 export interface DealRow {
   id: string;
@@ -127,6 +176,8 @@ export interface DealRow {
   investors: { slug: string; name: string; isLead: boolean }[];
   oneLiner: string | null;
   unreviewed: boolean;
+  website: string | null;
+  source: { url: string; publisher: string } | null;
 }
 
 export function dealRows(list: Round[] = rounds): DealRow[] {
@@ -153,6 +204,8 @@ export function dealRows(list: Round[] = rounds): DealRow[] {
       })),
       oneLiner: r.note?.one_liner ?? c?.description ?? null,
       unreviewed: r.reviewed === false,
+      website: c?.website ?? null,
+      source: r.sources[0] ?? null,
     };
   });
 }

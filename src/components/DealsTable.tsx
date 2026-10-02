@@ -1,8 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
-import type { DealRow, Vertical } from "@/lib/data";
+import Avatar from "@/components/Avatar";
+import { domainOf, type DealRow, type Vertical } from "@/lib/data";
 import { formatDate, formatInr, formatUsd, stageLabel } from "@/lib/format";
 
 interface Props {
@@ -10,11 +12,14 @@ interface Props {
   verticals: Vertical[];
   /** Hide the filter bar (used for short lists on company / investor pages). */
   compact?: boolean;
+  /** On a company's own page, the company name links to the deal instead of back to itself. */
+  onCompanyPage?: boolean;
 }
 
 type SortKey = "date" | "amount";
 
-export default function DealsTable({ rows, verticals, compact = false }: Props) {
+export default function DealsTable({ rows, verticals, compact = false, onCompanyPage = false }: Props) {
+  const router = useRouter();
   const [q, setQ] = useState("");
   const [vertical, setVertical] = useState("");
   const [subsector, setSubsector] = useState("");
@@ -197,21 +202,37 @@ export default function DealsTable({ rows, verticals, compact = false }: Props) 
           </thead>
           <tbody>
             {filtered.map((r) => (
-              <tr key={r.id}>
+              <tr
+                key={r.id}
+                className="row-link"
+                onClick={(e) => {
+                  // Let real links inside the row (company, investors, source) do their own thing.
+                  if ((e.target as HTMLElement).closest("a")) return;
+                  router.push(`/deals/${r.id}/`);
+                }}
+              >
                 <td className="num">
                   <Link href={`/deals/${r.id}/`}>{formatDate(r.date)}</Link>
                 </td>
                 <td>
-                  <Link className="deal-company" href={`/companies/${r.companySlug}/`}>
-                    {r.company}
-                  </Link>
-                  {r.isAdjacent && <span className="badge" style={{ marginLeft: 6 }}>adjacent</span>}
-                  {r.unreviewed && (
-                    <span className="badge" style={{ marginLeft: 6 }} title="Extracted automatically; not yet checked by a person">
-                      unreviewed
-                    </span>
-                  )}
-                  <div className="deal-sub">{r.oneLiner ?? r.city}</div>
+                  <div className="company-cell">
+                    <Avatar name={r.company} domain={domainOf(r.website)} size={32} />
+                    <div>
+                      <Link
+                        className="deal-company"
+                        href={onCompanyPage ? `/deals/${r.id}/` : `/companies/${r.companySlug}/`}
+                      >
+                        {r.company}
+                      </Link>
+                      {r.isAdjacent && <span className="badge" style={{ marginLeft: 6 }}>adjacent</span>}
+                      {r.unreviewed && (
+                        <span className="badge" style={{ marginLeft: 6 }} title="Extracted automatically; not yet checked by a person">
+                          unreviewed
+                        </span>
+                      )}
+                      <div className="deal-sub">{r.oneLiner ?? r.city}</div>
+                    </div>
+                  </div>
                 </td>
                 <td>{r.subsectorName}</td>
                 <td>
@@ -229,6 +250,13 @@ export default function DealsTable({ rows, verticals, compact = false }: Props) 
                       {i.isLead && <span className="muted small"> (lead)</span>}
                     </span>
                   ))}
+                  {r.source && (
+                    <div className="deal-sub">
+                      <a href={r.source.url} target="_blank" rel="noopener nofollow">
+                        {r.source.publisher} ↗
+                      </a>
+                    </div>
+                  )}
                 </td>
               </tr>
             ))}

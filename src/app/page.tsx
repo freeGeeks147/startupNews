@@ -1,20 +1,38 @@
 import Link from "next/link";
+import Avatar from "@/components/Avatar";
 import DealsTable from "@/components/DealsTable";
+import SectorChart from "@/components/SectorChart";
 import Subscribe from "@/components/Subscribe";
-import { companies, dealRows, rounds, verticals } from "@/lib/data";
-import { formatInr } from "@/lib/format";
+import {
+  biggestRound,
+  companies,
+  dealRows,
+  domainOf,
+  getCompany,
+  rounds,
+  sectorTotals,
+  subsectorName,
+  topInvestors,
+  verticals,
+} from "@/lib/data";
+import { formatInr, INVESTOR_TYPE_LABEL, stageLabel } from "@/lib/format";
 import { site } from "@/lib/site";
 
 export default function Home() {
   const inNiche = rounds.filter((r) => !companies.find((c) => c.slug === r.company)?.is_adjacent);
   const disclosed = inNiche.reduce((s, r) => s + (r.is_undisclosed ? 0 : (r.amount_inr ?? 0)), 0);
   const grants = inNiche.filter((r) => r.kind === "grant").length;
-  const notes = inNiche.filter((r) => r.note).length;
 
   // "Last 30 days" is measured at build time; fall back to the latest 8 if it's been quiet.
   const cutoff = new Date(Date.now() - 30 * 86_400_000).toISOString().slice(0, 10);
   const recent = inNiche.filter((r) => r.announced_on >= cutoff);
   const latest = recent.length > 0 ? recent : inNiche.slice(0, 8);
+
+  const sectors = sectorTotals();
+  const top = topInvestors(5);
+  const big = biggestRound(latest);
+  const bigCo = big && getCompany(big.company);
+  const hot = sectors[0];
 
   return (
     <>
@@ -44,13 +62,50 @@ export default function Home() {
           <div className="muted small">disclosed funding</div>
         </div>
         <div className="card">
+          <div className="stat">{companies.length}</div>
+          <div className="muted small">companies</div>
+        </div>
+        <div className="card">
           <div className="stat">{grants}</div>
           <div className="muted small">government grants</div>
         </div>
-        <div className="card">
-          <div className="stat">{notes}</div>
-          <div className="muted small">technical notes</div>
-        </div>
+      </div>
+
+      <div className="highlights">
+        {big && bigCo && (
+          <Link href={`/deals/${big.id}/`} className="card highlight">
+            <span className="kicker">Biggest round {recent.length > 0 ? "this month" : "recently"}</span>
+            <span className="who">
+              <Avatar name={bigCo.name} domain={domainOf(bigCo.website)} size={40} />
+              <span className="big">{bigCo.name}</span>
+            </span>
+            <span>
+              <strong>{formatInr(big.is_undisclosed ? null : big.amount_inr)}</strong> {stageLabel(big.stage)} ·{" "}
+              {subsectorName(bigCo.subsector)}
+            </span>
+            <span className="muted small">{bigCo.description}</span>
+          </Link>
+        )}
+        {top[0] && (
+          <Link href={`/investors/${top[0].investor.slug}/`} className="card highlight">
+            <span className="kicker">Most active investor</span>
+            <span className="big">{top[0].investor.name}</span>
+            <span>
+              <strong>{top[0].count}</strong> {top[0].count === 1 ? "deal" : "deals"}, led {top[0].leads}
+            </span>
+            <span className="muted small">{INVESTOR_TYPE_LABEL[top[0].investor.type] ?? top[0].investor.type}</span>
+          </Link>
+        )}
+        {hot && hot.count > 0 && (
+          <Link href={`/sectors/${hot.vertical.slug}/`} className="card highlight">
+            <span className="kicker">Hottest sector</span>
+            <span className="big">{hot.vertical.name}</span>
+            <span>
+              <strong>{formatInr(hot.total)}</strong> across {hot.count} {hot.count === 1 ? "deal" : "deals"}
+            </span>
+            <span className="muted small">{hot.vertical.subsectors.map((s) => s.name).join(", ")}</span>
+          </Link>
+        )}
       </div>
 
       <h2>{recent.length > 0 ? "Last 30 days" : "Latest deals"}</h2>
@@ -59,10 +114,31 @@ export default function Home() {
         <Link href="/deals/">See all deals and filters →</Link>
       </p>
 
+      <div className="two-col">
+        <section>
+          <h2>Where the money went</h2>
+          <SectorChart rows={sectors} />
+        </section>
+        <section>
+          <h2>Top investors</h2>
+          <ul className="list-plain">
+            {top.map(({ investor, count, leads }) => (
+              <li key={investor.slug}>
+                <Link href={`/investors/${investor.slug}/`}>{investor.name}</Link>
+                <span className="muted small">
+                  {count} {count === 1 ? "deal" : "deals"}
+                  {leads > 0 && ` · led ${leads}`}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      </div>
+
       <h2>Sectors</h2>
       <div className="grid">
         {verticals.map((v) => {
-          const count = inNiche.filter((r) => companies.find((c) => c.slug === r.company)?.vertical === v.slug).length;
+          const count = sectors.find((s) => s.vertical.slug === v.slug)?.count ?? 0;
           return (
             <Link key={v.slug} href={`/sectors/${v.slug}/`} className="card" style={{ color: "inherit" }}>
               <h3>{v.name}</h3>

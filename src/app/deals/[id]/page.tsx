@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import Avatar from "@/components/Avatar";
 import DealNote from "@/components/DealNote";
-import { getCompany, getInvestor, getRound, getVertical, rounds, subsectorName } from "@/lib/data";
+import { domainOf, getCompany, getInvestor, getRound, getVertical, rounds, subsectorName } from "@/lib/data";
 import { formatDate, formatInr, formatUsd, stageLabel } from "@/lib/format";
 
 type Params = { params: Promise<{ id: string }> };
@@ -34,12 +35,16 @@ export default async function DealPage({ params }: Params) {
       <p className="small">
         <Link href="/deals/">← All deals</Link>
       </p>
-      <h1>
-        <Link href={`/companies/${c.slug}/`} style={{ color: "inherit" }}>
-          {c.name}
-        </Link>{" "}
-        · {stageLabel(r.stage)}
-      </h1>
+      <div className="title-row">
+        <Avatar name={c.name} domain={domainOf(c.website)} size={56} />
+        <h1>
+          <Link href={`/companies/${c.slug}/`} style={{ color: "inherit" }}>
+            {c.name}
+          </Link>{" "}
+          · {stageLabel(r.stage)}
+        </h1>
+      </div>
+      <p className="lede">{c.description}</p>
       <div className="meta">
         {vertical && (
           <Link className="badge accent" href={`/sectors/${vertical.slug}/`}>
@@ -47,10 +52,26 @@ export default async function DealPage({ params }: Params) {
           </Link>
         )}
         <span className="badge">{subsectorName(c.subsector)}</span>
-        <span className="badge">{c.city}</span>
+        {c.city && <span className="badge">{c.city}</span>}
         {c.is_adjacent && <span className="badge">adjacent</span>}
         {r.sample && <span className="badge">sample record</span>}
         {r.reviewed === false && <span className="badge">unreviewed</span>}
+      </div>
+
+      <div className="actions-row">
+        {r.sources[0] && (
+          <a className="btn" href={r.sources[0].url} target="_blank" rel="noopener nofollow">
+            Read the story on {r.sources[0].publisher} ↗
+          </a>
+        )}
+        <Link className="btn secondary" href={`/companies/${c.slug}/`}>
+          {c.name} profile
+        </Link>
+        {c.website && (
+          <a className="btn secondary" href={c.website} target="_blank" rel="noopener nofollow">
+            Website ↗
+          </a>
+        )}
       </div>
 
       {r.reviewed === false && (

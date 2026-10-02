@@ -22,6 +22,9 @@ CLAUDE_CODE_MODEL = "haiku"           # used via the Claude Code CLI on your sub
 # anything left over is picked up by the next daily run.
 MAX_ARTICLES_PER_RUN = 40
 
+# Companies looked up on the web per run (website, city, founding year, description).
+ENRICH_PER_RUN = 15
+
 # RSS feeds to poll (checked 1 Oct 2026). Most keep only ~1 week of items, so the ingest runs
 # daily even though the site publishes weekly. A failing feed is logged and skipped.
 FEEDS = [
@@ -69,6 +72,14 @@ def save_json(path: Path, value) -> None:
 
 def taxonomy() -> dict:
     return load_json(TAXONOMY_FILE, {})
+
+
+def subsector_label(slug: str) -> str:
+    for v in taxonomy().get("verticals", []):
+        for s in v["subsectors"]:
+            if s["slug"] == slug:
+                return f"{s['name']} ({v['name']})"
+    return slug
 
 
 def subsector_slugs(vertical: str) -> set[str]:

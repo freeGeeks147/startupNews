@@ -93,16 +93,21 @@ CLAUDE_CODE_TIMEOUT = 300  # seconds per article
 _consecutive_failures = 0
 
 
-def _run_claude(system: str, prompt: str, timeout: int) -> dict:
-    """Run `claude -p` once and return its JSON envelope. Raises ExtractionUnavailable on hard failure."""
+def _run_claude(system: str, prompt: str, timeout: int, tools: str = "") -> dict:
+    """Run `claude -p` once and return its JSON envelope. Raises ExtractionUnavailable on hard failure.
+
+    `tools` is a comma-separated list of built-in tools to allow (e.g. "WebSearch,WebFetch"); empty means none.
+    """
     cmd = [
         _claude_bin(), "-p",
         "--model", config.CLAUDE_CODE_MODEL,
-        "--tools", "",
+        "--tools", tools,
         "--system-prompt", system,
         "--output-format", "json",
         "--no-session-persistence",
     ]
+    if tools:
+        cmd += ["--allowedTools", tools]
     # An empty API key variable (e.g. an unset GitHub secret) must not shadow the subscription token.
     env = {k: v for k, v in os.environ.items() if not (k == "ANTHROPIC_API_KEY" and not v)}
     # The prompt goes in on stdin to stay clear of command-line length limits.
