@@ -20,10 +20,13 @@ CLAUDE_CODE_MODEL = "haiku"           # used via the Claude Code CLI on your sub
 
 # Articles sent to Claude per run. Keeps each run well inside a Pro plan's usage window;
 # anything left over is picked up by the next daily run.
-MAX_ARTICLES_PER_RUN = 40
+MAX_ARTICLES_PER_RUN = 20
+
+# Claude calls in flight at once. With 20 articles at ~30-60s each, 4 keeps a run near 5-10 minutes.
+EXTRACT_WORKERS = 4
 
 # Companies looked up on the web per run (website, city, founding year, description).
-ENRICH_PER_RUN = 15
+ENRICH_PER_RUN = 8
 
 # RSS feeds to poll (checked 1 Oct 2026). Most keep only ~1 week of items, so the ingest runs
 # daily even though the site publishes weekly. A failing feed is logged and skipped.

@@ -51,7 +51,7 @@ python -m pipeline.review unreviewed   # auto-published deals to check
 python -m pipeline.review verify <id>  # remove the "unreviewed" badge
 ```
 
-Extraction uses Claude Haiku with a JSON schema, validated by Pydantic. At most 40 articles go to Claude per run (`MAX_ARTICLES_PER_RUN`), so the first-run backfill spreads over a couple of days and stays inside a Pro plan's usage window. If a usage limit is hit, the run stops and the remaining articles are retried next time. Amounts are converted to INR and USD at the announcement-date rate (Frankfurter / ECB rates). Only facts and source links are stored, never article text.
+Extraction uses Claude Haiku with a JSON schema, validated by Pydantic. At most 20 articles go to Claude per run, 4 at a time (`MAX_ARTICLES_PER_RUN`, `EXTRACT_WORKERS`), so a run takes about 5–10 minutes and the first-run backfill spreads over several days and stays inside a Pro plan's usage window. If a usage limit is hit, the run stops and the remaining articles are retried next time. Amounts are converted to INR and USD at the announcement-date rate (Frankfurter / ECB rates). Only facts and source links are stored, never article text.
 
 ## Deploy on GitHub Pages
 

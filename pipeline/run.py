@@ -10,6 +10,7 @@ New rounds land in data/pending/ for review with `python -m pipeline.review`.
 """
 
 import argparse
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 
 from . import config
@@ -51,18 +52,35 @@ def process(articles: list[Article], dry_run: bool) -> None:
         print(f"Processing {config.MAX_ARTICLES_PER_RUN} of {len(articles)}; the rest wait for the next run.")
         articles = articles[: config.MAX_ARTICLES_PER_RUN]
 
+    # Phase 1: download article text one at a time (polite to the news sites).
+    texts: list[tuple[Article, str]] = []
     for art in articles:
-        print(f"- {art.publisher}: {art.title}")
         text = fetcher.text(art.url)
-        if not text:
+        if text:
+            texts.append((art, text))
+        else:
             seen.add(url_hash(art.url))
-            continue
+    print(f"Fetched {len(texts)} articles; extracting with {config.EXTRACT_WORKERS} in parallel")
+
+    # Phase 2: send several articles to Claude at once; handle each result as it lands.
+    def work(item: tuple[Article, str]):
+        art, text = item
+        return art, extract_deals(art.title, text, art.published)
+
+    pool = ThreadPoolExecutor(max_workers=config.EXTRACT_WORKERS)
+    futures = [pool.submit(work, item) for item in texts]
+    done_count = 0
+    for future in as_completed(futures):
         try:
-            deals = extract_deals(art.title, text, art.published)
+            art, deals = future.result()
         except ExtractionUnavailable as exc:
-            # Leave this and later articles unseen so the next run picks them up.
+            # Leave unfinished articles unseen so the next run picks them up.
             print(f"  ! stopping early, Claude unavailable: {exc}")
+            for f in futures:
+                f.cancel()
             break
+        done_count += 1
+        print(f"[{done_count}/{len(texts)}] {art.publisher}: {art.title} -> {len(deals)} in-scope")
         seen.add(url_hash(art.url))
         if not dry_run:
             # Save progress per article so an interrupted run doesn't redo finished work.
@@ -112,6 +130,8 @@ def process(articles: list[Article], dry_run: bool) -> None:
             print(f"    + {d.company} · {d.stage} · {amount} · {d.subsector} (conf {d.confidence:.2f})")
             if not dry_run:
                 config.save_json(config.PENDING / f"{record['id']}.json", record)
+
+    pool.shutdown(wait=False, cancel_futures=True)
 
     if dry_run:
         print(f"\nDry run: {created} new, {merged} merged. Nothing written.")
