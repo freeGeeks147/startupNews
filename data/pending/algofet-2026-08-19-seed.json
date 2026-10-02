@@ -1,0 +1,32 @@
+{
+  "id": "algofet-2026-08-19-seed",
+  "status": "pending",
+  "company_name": "AlgoFET",
+  "company_slug": "algofet",
+  "company_description": "A defence technology company building advanced hardware and electronics solutions",
+  "city": null,
+  "vertical": "space-defence",
+  "subsector": "defence-electronics",
+  "is_adjacent": false,
+  "announced_on": "2026-08-19",
+  "kind": "equity",
+  "stage": "seed",
+  "amount_inr": 143640000,
+  "amount_usd": 1500000,
+  "currency_original": "USD",
+  "is_undisclosed": false,
+  "investors": [
+    {
+      "name": "Piper Serica",
+      "is_lead": true
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://inc42.com/buzz/from-navi-to-bookmyshow-indian-startups-raised-over-233-mn-this-week/",
+      "publisher": "Inc42 Funding Galore",
+      "fetched_at": "2026-10-02T05:30:13+00:00"
+    }
+  ],
+  "confidence": 0.75
+}

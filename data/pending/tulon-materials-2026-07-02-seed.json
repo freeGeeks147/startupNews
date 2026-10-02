@@ -1,0 +1,44 @@
+{
+  "id": "tulon-materials-2026-07-02-seed",
+  "status": "pending",
+  "company_name": "Tulon Materials",
+  "company_slug": "tulon-materials",
+  "company_description": "Manufacturing solutions company specializing in advanced materials",
+  "city": null,
+  "vertical": "advanced-manufacturing",
+  "subsector": "advanced-materials",
+  "is_adjacent": false,
+  "announced_on": "2026-07-02",
+  "kind": "equity",
+  "stage": "seed",
+  "amount_inr": 104929000,
+  "amount_usd": 1100000,
+  "currency_original": "USD",
+  "is_undisclosed": false,
+  "investors": [
+    {
+      "name": "Karthik Sundar Iyer",
+      "is_lead": true
+    },
+    {
+      "name": "Karan Goshar",
+      "is_lead": false
+    },
+    {
+      "name": "Prakhar Pandey",
+      "is_lead": false
+    },
+    {
+      "name": "Agam Shah",
+      "is_lead": false
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://inc42.com/buzz/from-the-indus-valley-to-incuspaze-indian-startups-raised-105-mn-this-week/",
+      "publisher": "Inc42 Funding Galore",
+      "fetched_at": "2026-10-02T05:34:16+00:00"
+    }
+  ],
+  "confidence": 0.7
+}

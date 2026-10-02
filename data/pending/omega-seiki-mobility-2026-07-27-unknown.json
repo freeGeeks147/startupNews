@@ -1,0 +1,44 @@
+{
+  "id": "omega-seiki-mobility-2026-07-27-unknown",
+  "status": "pending",
+  "company_name": "Omega Seiki Mobility",
+  "company_slug": "omega-seiki-mobility",
+  "company_description": "Electric vehicle manufacturer",
+  "city": null,
+  "vertical": "energy-climate",
+  "subsector": "batteries",
+  "is_adjacent": true,
+  "announced_on": "2026-07-27",
+  "kind": "equity",
+  "stage": "unknown",
+  "amount_inr": 498784000,
+  "amount_usd": 5200000,
+  "currency_original": "USD",
+  "is_undisclosed": false,
+  "investors": [
+    {
+      "name": "Saket Aggarwal Family Office",
+      "is_lead": false
+    },
+    {
+      "name": "Securocorp Securities",
+      "is_lead": false
+    },
+    {
+      "name": "Sangeeta Pareekh",
+      "is_lead": false
+    },
+    {
+      "name": "Vanshika Sharma",
+      "is_lead": false
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://inc42.com/buzz/from-freehand-to-sids-farms-indian-startups-raised-142-mn-this-week/",
+      "publisher": "Inc42 Funding Galore",
+      "fetched_at": "2026-10-02T05:32:34+00:00"
+    }
+  ],
+  "confidence": 0.7
+}

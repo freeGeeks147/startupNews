@@ -1,0 +1,64 @@
+{
+  "id": "pramatra-space-2026-05-25-pre-seed",
+  "status": "pending",
+  "company_name": "Pramatra Space",
+  "company_slug": "pramatra-space",
+  "company_description": "A space technology company developing satellite or space-enabled hardware",
+  "city": null,
+  "vertical": "space-defence",
+  "subsector": "satellites-eo",
+  "is_adjacent": false,
+  "announced_on": "2026-05-25",
+  "kind": "equity",
+  "stage": "pre-seed",
+  "amount_inr": null,
+  "amount_usd": null,
+  "currency_original": null,
+  "is_undisclosed": true,
+  "investors": [
+    {
+      "name": "Seafund Ventures",
+      "is_lead": true
+    },
+    {
+      "name": "Rebalance",
+      "is_lead": false
+    },
+    {
+      "name": "Magnivia Ventures",
+      "is_lead": false
+    },
+    {
+      "name": "Peaceful Progress Fund",
+      "is_lead": false
+    },
+    {
+      "name": "Awais Ahmed",
+      "is_lead": false
+    },
+    {
+      "name": "Techstars",
+      "is_lead": false
+    },
+    {
+      "name": "Neel Mehta",
+      "is_lead": false
+    },
+    {
+      "name": "Raghunath Das",
+      "is_lead": false
+    },
+    {
+      "name": "Bhavya Doshi",
+      "is_lead": false
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://inc42.com/buzz/from-fairdeal-market-to-abcoffee-indian-startups-raised-52-mn-this-week/",
+      "publisher": "Inc42 Funding Galore",
+      "fetched_at": "2026-10-02T05:36:39+00:00"
+    }
+  ],
+  "confidence": 0.73
+}

@@ -1,0 +1,27 @@
+{
+  "id": "healthify-2026-08-29-acquisition",
+  "status": "pending",
+  "company_name": "Healthify",
+  "company_slug": "healthify",
+  "company_description": "Healthtech company building AI-powered metabolic health and nutrition care platform",
+  "city": null,
+  "vertical": "healthtech",
+  "subsector": "ai-diagnostics",
+  "is_adjacent": false,
+  "announced_on": "2026-08-29",
+  "kind": "acquisition",
+  "stage": "acquisition",
+  "amount_inr": null,
+  "amount_usd": null,
+  "currency_original": null,
+  "is_undisclosed": true,
+  "investors": [],
+  "sources": [
+    {
+      "url": "https://inc42.com/buzz/from-third-wave-coffee-to-matter-indian-startups-raised-over-210-mn-this-week/",
+      "publisher": "Inc42 Funding Galore",
+      "fetched_at": "2026-10-02T05:31:26+00:00"
+    }
+  ],
+  "confidence": 0.75
+}

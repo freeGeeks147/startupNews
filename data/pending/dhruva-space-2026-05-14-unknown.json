@@ -1,0 +1,32 @@
+{
+  "id": "dhruva-space-2026-05-14-unknown",
+  "status": "pending",
+  "company_name": "Dhruva Space",
+  "company_slug": "dhruva-space",
+  "company_description": "Spacetech company",
+  "city": null,
+  "vertical": "space-defence",
+  "subsector": "satellites-eo",
+  "is_adjacent": false,
+  "announced_on": "2026-05-14",
+  "kind": "equity",
+  "stage": "unknown",
+  "amount_inr": 1053470000,
+  "amount_usd": 11000000,
+  "currency_original": "USD",
+  "is_undisclosed": false,
+  "investors": [
+    {
+      "name": "Research, Development & Innovation Fund (RDIF)",
+      "is_lead": true
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://inc42.com/buzz/from-rapido-to-hrdwyr-indian-startups-raised-303-mn-this-week/",
+      "publisher": "Inc42 Funding Galore",
+      "fetched_at": "2026-10-02T05:37:24+00:00"
+    }
+  ],
+  "confidence": 0.7
+}

@@ -1,0 +1,32 @@
+{
+  "id": "albatross-energetics-2026-07-01-unknown",
+  "status": "pending",
+  "company_name": "Albatross Energetics",
+  "company_slug": "albatross-energetics",
+  "company_description": "Advanced hardware company developing IoT and connected solutions",
+  "city": null,
+  "vertical": "advanced-manufacturing",
+  "subsector": "industrial-iot",
+  "is_adjacent": false,
+  "announced_on": "2026-07-01",
+  "kind": "equity",
+  "stage": "unknown",
+  "amount_inr": 104775000,
+  "amount_usd": 1100000,
+  "currency_original": "USD",
+  "is_undisclosed": false,
+  "investors": [
+    {
+      "name": "Transition VC",
+      "is_lead": true
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://inc42.com/buzz/from-the-indus-valley-to-incuspaze-indian-startups-raised-105-mn-this-week/",
+      "publisher": "Inc42 Funding Galore",
+      "fetched_at": "2026-10-02T05:34:16+00:00"
+    }
+  ],
+  "confidence": 0.68
+}

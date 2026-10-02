@@ -1,0 +1,68 @@
+{
+  "id": "zenergize-2026-09-01-seed",
+  "status": "pending",
+  "company_name": "Zenergize",
+  "company_slug": "zenergize",
+  "company_description": "Develops electric vehicle powertrain and battery technology",
+  "city": null,
+  "vertical": "energy-climate",
+  "subsector": "batteries",
+  "is_adjacent": false,
+  "announced_on": "2026-09-01",
+  "kind": "equity",
+  "stage": "seed",
+  "amount_inr": 379800000,
+  "amount_usd": 4000000,
+  "currency_original": "USD",
+  "is_undisclosed": false,
+  "investors": [
+    {
+      "name": "Giraffe Studios",
+      "is_lead": true
+    },
+    {
+      "name": "Nikhil Sawhney",
+      "is_lead": false
+    },
+    {
+      "name": "Varun Agarwal",
+      "is_lead": false
+    },
+    {
+      "name": "Shyam Bagri",
+      "is_lead": false
+    },
+    {
+      "name": "Raoul Bajaj",
+      "is_lead": false
+    },
+    {
+      "name": "Sunil Kalra",
+      "is_lead": false
+    },
+    {
+      "name": "Ajith Pai",
+      "is_lead": false
+    },
+    {
+      "name": "Sandeep Barasia",
+      "is_lead": false
+    },
+    {
+      "name": "Nitin Jain",
+      "is_lead": false
+    },
+    {
+      "name": "Hemant Daga",
+      "is_lead": false
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://inc42.com/buzz/from-ultrahuman-to-comet-indian-startups-raised-over-177-mn-this-week/",
+      "publisher": "Inc42 Funding Galore",
+      "fetched_at": "2026-10-02T05:31:06+00:00"
+    }
+  ],
+  "confidence": 0.7
+}

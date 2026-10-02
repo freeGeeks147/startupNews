@@ -1,0 +1,56 @@
+{
+  "id": "exponent-energy-2026-06-10-unknown",
+  "status": "pending",
+  "company_name": "Exponent Energy",
+  "company_slug": "exponent-energy",
+  "company_description": "Electric vehicle company developing battery-dependent mobility solutions",
+  "city": null,
+  "vertical": "energy-climate",
+  "subsector": "batteries",
+  "is_adjacent": true,
+  "announced_on": "2026-06-10",
+  "kind": "equity",
+  "stage": "unknown",
+  "amount_inr": 2010197000,
+  "amount_usd": 21100000,
+  "currency_original": "USD",
+  "is_undisclosed": false,
+  "investors": [
+    {
+      "name": "360 ONE Asset",
+      "is_lead": true
+    },
+    {
+      "name": "TDK Ventures",
+      "is_lead": true
+    },
+    {
+      "name": "Hitachi Ventures",
+      "is_lead": false
+    },
+    {
+      "name": "Lightspeed",
+      "is_lead": false
+    },
+    {
+      "name": "Eight Roads Ventures",
+      "is_lead": false
+    },
+    {
+      "name": "3one4 Capital",
+      "is_lead": false
+    },
+    {
+      "name": "AdvantEdge VC",
+      "is_lead": false
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://inc42.com/buzz/from-gps-renewables-to-equal-ai-indian-startups-raised-243-mn-this-week/",
+      "publisher": "Inc42 Funding Galore",
+      "fetched_at": "2026-10-02T05:36:18+00:00"
+    }
+  ],
+  "confidence": 0.75
+}

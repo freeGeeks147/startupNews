@@ -1,0 +1,32 @@
+{
+  "id": "yulu-2026-08-12-C+",
+  "status": "pending",
+  "company_name": "Yulu",
+  "company_slug": "yulu",
+  "company_description": "Electric scooter and bike sharing platform",
+  "city": null,
+  "vertical": "energy-climate",
+  "subsector": "batteries",
+  "is_adjacent": true,
+  "announced_on": "2026-08-12",
+  "kind": "equity",
+  "stage": "C+",
+  "amount_inr": 8866620000,
+  "amount_usd": 93000000,
+  "currency_original": "USD",
+  "is_undisclosed": false,
+  "investors": [
+    {
+      "name": "GEF Capital Partners",
+      "is_lead": true
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://inc42.com/buzz/from-yulu-to-discovered-materials-indian-startups-raised-140-mn-this-week/",
+      "publisher": "Inc42 Funding Galore",
+      "fetched_at": "2026-10-02T05:31:00+00:00"
+    }
+  ],
+  "confidence": 0.75
+}

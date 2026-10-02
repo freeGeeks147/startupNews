@@ -1,0 +1,32 @@
+{
+  "id": "4basecare-2026-06-11-B",
+  "status": "pending",
+  "company_name": "4baseCare",
+  "company_slug": "4basecare",
+  "company_description": "Lifesciences company developing biotech solutions and therapeutics",
+  "city": null,
+  "vertical": "healthtech",
+  "subsector": "biotech",
+  "is_adjacent": false,
+  "announced_on": "2026-06-11",
+  "kind": "equity",
+  "stage": "B",
+  "amount_inr": 383040000,
+  "amount_usd": 4000000,
+  "currency_original": "USD",
+  "is_undisclosed": false,
+  "investors": [
+    {
+      "name": "growX Ventures",
+      "is_lead": true
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://inc42.com/buzz/from-gps-renewables-to-equal-ai-indian-startups-raised-243-mn-this-week/",
+      "publisher": "Inc42 Funding Galore",
+      "fetched_at": "2026-10-02T05:36:18+00:00"
+    }
+  ],
+  "confidence": 0.7
+}

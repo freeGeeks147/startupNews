@@ -1,0 +1,32 @@
+{
+  "id": "intercosmos-2026-06-01-unknown",
+  "status": "pending",
+  "company_name": "InterCosmos",
+  "company_slug": "intercosmos",
+  "company_description": "A space technology company developing B2B spacetech solutions.",
+  "city": null,
+  "vertical": "space-defence",
+  "subsector": "satellites-eo",
+  "is_adjacent": false,
+  "announced_on": "2026-06-01",
+  "kind": "equity",
+  "stage": "unknown",
+  "amount_inr": null,
+  "amount_usd": null,
+  "currency_original": null,
+  "is_undisclosed": true,
+  "investors": [
+    {
+      "name": "a99 VC",
+      "is_lead": true
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://inc42.com/buzz/from-firstclub-to-innefu-indian-startups-raised-187-mn-this-week/",
+      "publisher": "Inc42 Funding Galore",
+      "fetched_at": "2026-10-02T05:35:55+00:00"
+    }
+  ],
+  "confidence": 0.7
+}

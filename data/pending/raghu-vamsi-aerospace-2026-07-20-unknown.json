@@ -1,0 +1,48 @@
+{
+  "id": "raghu-vamsi-aerospace-2026-07-20-unknown",
+  "status": "pending",
+  "company_name": "Raghu Vamsi Aerospace",
+  "company_slug": "raghu-vamsi-aerospace",
+  "company_description": "Aerospace and aerial vehicle development company.",
+  "city": null,
+  "vertical": "space-defence",
+  "subsector": "drones",
+  "is_adjacent": false,
+  "announced_on": "2026-07-20",
+  "kind": "equity",
+  "stage": "unknown",
+  "amount_inr": 3858000000,
+  "amount_usd": 40000000,
+  "currency_original": "USD",
+  "is_undisclosed": false,
+  "investors": [
+    {
+      "name": "Norwest",
+      "is_lead": true
+    },
+    {
+      "name": "Skegen Asset Management",
+      "is_lead": true
+    },
+    {
+      "name": "Indus Bridge Ventures",
+      "is_lead": false
+    },
+    {
+      "name": "GJNX Ventures",
+      "is_lead": false
+    },
+    {
+      "name": "Ashish Kacholia",
+      "is_lead": false
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://inc42.com/buzz/from-zetwerk-to-veriqus-indian-startups-raised-209-mn-this-week/",
+      "publisher": "Inc42 Funding Galore",
+      "fetched_at": "2026-10-02T05:33:53+00:00"
+    }
+  ],
+  "confidence": 0.75
+}

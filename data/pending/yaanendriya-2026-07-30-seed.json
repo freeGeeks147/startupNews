@@ -1,0 +1,32 @@
+{
+  "id": "yaanendriya-2026-07-30-seed",
+  "status": "pending",
+  "company_name": "Yaanendriya",
+  "company_slug": "yaanendriya",
+  "company_description": "Developer of Internet of Things hardware solutions",
+  "city": null,
+  "vertical": "advanced-manufacturing",
+  "subsector": "industrial-iot",
+  "is_adjacent": false,
+  "announced_on": "2026-07-30",
+  "kind": "equity",
+  "stage": "seed",
+  "amount_inr": 153104000,
+  "amount_usd": 1600000,
+  "currency_original": "USD",
+  "is_undisclosed": false,
+  "investors": [
+    {
+      "name": "Piper Serica",
+      "is_lead": true
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://inc42.com/buzz/from-freehand-to-sids-farms-indian-startups-raised-142-mn-this-week/",
+      "publisher": "Inc42 Funding Galore",
+      "fetched_at": "2026-10-02T05:32:34+00:00"
+    }
+  ],
+  "confidence": 0.7
+}

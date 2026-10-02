@@ -1,0 +1,36 @@
+{
+  "id": "neogeo-2026-08-18-A",
+  "status": "pending",
+  "company_name": "NeoGeo",
+  "company_slug": "neogeo",
+  "company_description": "An internet of things and hardware company building advanced technology solutions for industrial IoT applications",
+  "city": null,
+  "vertical": "advanced-manufacturing",
+  "subsector": "industrial-iot",
+  "is_adjacent": false,
+  "announced_on": "2026-08-18",
+  "kind": "equity",
+  "stage": "A",
+  "amount_inr": 1913800000,
+  "amount_usd": 20000000,
+  "currency_original": "USD",
+  "is_undisclosed": false,
+  "investors": [
+    {
+      "name": "SBI Ventures",
+      "is_lead": true
+    },
+    {
+      "name": "Aavishkaar Capital",
+      "is_lead": false
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://inc42.com/buzz/from-navi-to-bookmyshow-indian-startups-raised-over-233-mn-this-week/",
+      "publisher": "Inc42 Funding Galore",
+      "fetched_at": "2026-10-02T05:30:13+00:00"
+    }
+  ],
+  "confidence": 0.75
+}

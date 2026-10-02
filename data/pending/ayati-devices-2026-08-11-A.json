@@ -1,0 +1,32 @@
+{
+  "id": "ayati-devices-2026-08-11-A",
+  "status": "pending",
+  "company_name": "Ayati Devices",
+  "company_slug": "ayati-devices",
+  "company_description": "Medical devices company developing healthcare devices",
+  "city": null,
+  "vertical": "healthtech",
+  "subsector": "medical-devices",
+  "is_adjacent": false,
+  "announced_on": "2026-08-11",
+  "kind": "equity",
+  "stage": "A",
+  "amount_inr": 152704000,
+  "amount_usd": 1600000,
+  "currency_original": "USD",
+  "is_undisclosed": false,
+  "investors": [
+    {
+      "name": "Inflexor Ventures",
+      "is_lead": true
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://inc42.com/buzz/from-yulu-to-discovered-materials-indian-startups-raised-140-mn-this-week/",
+      "publisher": "Inc42 Funding Galore",
+      "fetched_at": "2026-10-02T05:31:00+00:00"
+    }
+  ],
+  "confidence": 0.75
+}

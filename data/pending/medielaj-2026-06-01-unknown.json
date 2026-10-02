@@ -1,0 +1,27 @@
+{
+  "id": "medielaj-2026-06-01-unknown",
+  "status": "pending",
+  "company_name": "MediElaj",
+  "company_slug": "medielaj",
+  "company_description": "A healthcare technology company providing diagnostic solutions.",
+  "city": null,
+  "vertical": "healthtech",
+  "subsector": "medical-devices",
+  "is_adjacent": false,
+  "announced_on": "2026-06-01",
+  "kind": "equity",
+  "stage": "unknown",
+  "amount_inr": 9499000,
+  "amount_usd": 100000,
+  "currency_original": "USD",
+  "is_undisclosed": false,
+  "investors": [],
+  "sources": [
+    {
+      "url": "https://inc42.com/buzz/from-firstclub-to-innefu-indian-startups-raised-187-mn-this-week/",
+      "publisher": "Inc42 Funding Galore",
+      "fetched_at": "2026-10-02T05:35:55+00:00"
+    }
+  ],
+  "confidence": 0.75
+}

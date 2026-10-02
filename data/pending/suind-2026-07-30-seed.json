@@ -1,0 +1,36 @@
+{
+  "id": "suind-2026-07-30-seed",
+  "status": "pending",
+  "company_name": "SUIND",
+  "company_slug": "suind",
+  "company_description": "Developer of aerial vehicle hardware for commercial applications",
+  "city": null,
+  "vertical": "space-defence",
+  "subsector": "drones",
+  "is_adjacent": false,
+  "announced_on": "2026-07-30",
+  "kind": "equity",
+  "stage": "seed",
+  "amount_inr": 200949000,
+  "amount_usd": 2100000,
+  "currency_original": "USD",
+  "is_undisclosed": false,
+  "investors": [
+    {
+      "name": "Transition VC",
+      "is_lead": true
+    },
+    {
+      "name": "IIMA Ventures",
+      "is_lead": false
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://inc42.com/buzz/from-freehand-to-sids-farms-indian-startups-raised-142-mn-this-week/",
+      "publisher": "Inc42 Funding Galore",
+      "fetched_at": "2026-10-02T05:32:34+00:00"
+    }
+  ],
+  "confidence": 0.75
+}

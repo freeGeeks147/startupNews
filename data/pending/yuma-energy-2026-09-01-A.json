@@ -1,0 +1,32 @@
+{
+  "id": "yuma-energy-2026-09-01-A",
+  "status": "pending",
+  "company_name": "Yuma Energy",
+  "company_slug": "yuma-energy",
+  "company_description": "Develops electric vehicle battery and powertrain technology",
+  "city": null,
+  "vertical": "energy-climate",
+  "subsector": "batteries",
+  "is_adjacent": false,
+  "announced_on": "2026-09-01",
+  "kind": "equity",
+  "stage": "A",
+  "amount_inr": 3323250000,
+  "amount_usd": 35000000,
+  "currency_original": "USD",
+  "is_undisclosed": false,
+  "investors": [
+    {
+      "name": "Magna International",
+      "is_lead": true
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://inc42.com/buzz/from-ultrahuman-to-comet-indian-startups-raised-over-177-mn-this-week/",
+      "publisher": "Inc42 Funding Galore",
+      "fetched_at": "2026-10-02T05:31:06+00:00"
+    }
+  ],
+  "confidence": 0.75
+}

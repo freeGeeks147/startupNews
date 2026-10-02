@@ -1,0 +1,40 @@
+{
+  "id": "biodimension-2026-06-11-unknown",
+  "status": "pending",
+  "company_name": "Biodimension",
+  "company_slug": "biodimension",
+  "company_description": "Lifesciences and biotech company developing biological science solutions",
+  "city": null,
+  "vertical": "healthtech",
+  "subsector": "biotech",
+  "is_adjacent": false,
+  "announced_on": "2026-06-11",
+  "kind": "equity",
+  "stage": "unknown",
+  "amount_inr": 80534160,
+  "amount_usd": 841000,
+  "currency_original": "USD",
+  "is_undisclosed": false,
+  "investors": [
+    {
+      "name": "Indian Angel Network",
+      "is_lead": true
+    },
+    {
+      "name": "Campus Angels Network",
+      "is_lead": false
+    },
+    {
+      "name": "Sampath Srisailam",
+      "is_lead": false
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://inc42.com/buzz/from-gps-renewables-to-equal-ai-indian-startups-raised-243-mn-this-week/",
+      "publisher": "Inc42 Funding Galore",
+      "fetched_at": "2026-10-02T05:36:18+00:00"
+    }
+  ],
+  "confidence": 0.7
+}

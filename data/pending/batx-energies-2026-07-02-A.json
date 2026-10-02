@@ -1,0 +1,48 @@
+{
+  "id": "batx-energies-2026-07-02-A",
+  "status": "pending",
+  "company_name": "BatX Energies",
+  "company_slug": "batx-energies",
+  "company_description": "Clean technology company developing electric vehicle solutions",
+  "city": null,
+  "vertical": "energy-climate",
+  "subsector": "batteries",
+  "is_adjacent": false,
+  "announced_on": "2026-07-02",
+  "kind": "equity",
+  "stage": "A",
+  "amount_inr": 1049290000,
+  "amount_usd": 11000000,
+  "currency_original": "USD",
+  "is_undisclosed": false,
+  "investors": [
+    {
+      "name": "IvyCap Ventures",
+      "is_lead": true
+    },
+    {
+      "name": "Zephyr Peacock",
+      "is_lead": false
+    },
+    {
+      "name": "Mankind Pharma Family Office",
+      "is_lead": false
+    },
+    {
+      "name": "Excel Industries Family Office",
+      "is_lead": false
+    },
+    {
+      "name": "JITO",
+      "is_lead": false
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://inc42.com/buzz/from-the-indus-valley-to-incuspaze-indian-startups-raised-105-mn-this-week/",
+      "publisher": "Inc42 Funding Galore",
+      "fetched_at": "2026-10-02T05:34:16+00:00"
+    }
+  ],
+  "confidence": 0.75
+}

@@ -1,0 +1,32 @@
+{
+  "id": "baas-2026-07-09-pre-seed",
+  "status": "pending",
+  "company_name": "BAAS Technologies",
+  "company_slug": "baas",
+  "company_description": "A space technology company developing advanced hardware solutions for space applications",
+  "city": null,
+  "vertical": "space-defence",
+  "subsector": "satellites-eo",
+  "is_adjacent": false,
+  "announced_on": "2026-07-09",
+  "kind": "equity",
+  "stage": "pre-seed",
+  "amount_inr": 50079750,
+  "amount_usd": 525000,
+  "currency_original": "USD",
+  "is_undisclosed": false,
+  "investors": [
+    {
+      "name": "Inflection Point Ventures",
+      "is_lead": true
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://inc42.com/features/from-elevate-education-to-aukera-indian-startups-raised-72-mn-this-week/",
+      "publisher": "Inc42 Funding Galore",
+      "fetched_at": "2026-10-02T05:34:39+00:00"
+    }
+  ],
+  "confidence": 0.65
+}

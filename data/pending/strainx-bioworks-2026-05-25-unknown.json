@@ -1,0 +1,56 @@
+{
+  "id": "strainx-bioworks-2026-05-25-unknown",
+  "status": "pending",
+  "company_name": "StrainX Bioworks",
+  "company_slug": "strainx-bioworks",
+  "company_description": "A lifescience-focused biotech company",
+  "city": null,
+  "vertical": "healthtech",
+  "subsector": "biotech",
+  "is_adjacent": false,
+  "announced_on": "2026-05-25",
+  "kind": "equity",
+  "stage": "unknown",
+  "amount_inr": 1238120000,
+  "amount_usd": 13000000,
+  "currency_original": "USD",
+  "is_undisclosed": false,
+  "investors": [
+    {
+      "name": "Prime Venture Partners",
+      "is_lead": true
+    },
+    {
+      "name": "Leo Capital",
+      "is_lead": true
+    },
+    {
+      "name": "Good Startup",
+      "is_lead": false
+    },
+    {
+      "name": "Sparrow Capital",
+      "is_lead": false
+    },
+    {
+      "name": "Sun Icon Ventures",
+      "is_lead": false
+    },
+    {
+      "name": "Dholakia Ventures",
+      "is_lead": false
+    },
+    {
+      "name": "WindT Angels",
+      "is_lead": false
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://inc42.com/buzz/from-fairdeal-market-to-abcoffee-indian-startups-raised-52-mn-this-week/",
+      "publisher": "Inc42 Funding Galore",
+      "fetched_at": "2026-10-02T05:36:39+00:00"
+    }
+  ],
+  "confidence": 0.75
+}

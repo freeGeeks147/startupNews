@@ -23,5 +23,385 @@
     "slug": "bluehill-vc",
     "name": "Bluehill VC",
     "type": "vc"
+  },
+  {
+    "slug": "greenoaks",
+    "name": "Greenoaks",
+    "type": "vc"
+  },
+  {
+    "slug": "doordash",
+    "name": "DoorDash",
+    "type": "vc"
+  },
+  {
+    "slug": "lachy-groom-physical-intelligence",
+    "name": "Lachy Groom (Physical Intelligence)",
+    "type": "vc"
+  },
+  {
+    "slug": "lightspeed",
+    "name": "Lightspeed",
+    "type": "vc"
+  },
+  {
+    "slug": "humba-ventures",
+    "name": "Humba Ventures",
+    "type": "vc"
+  },
+  {
+    "slug": "lachy-groom",
+    "name": "Lachy Groom",
+    "type": "vc"
+  },
+  {
+    "slug": "together-fund",
+    "name": "Together Fund",
+    "type": "vc"
+  },
+  {
+    "slug": "india-angel-network",
+    "name": "India Angel Network",
+    "type": "vc"
+  },
+  {
+    "slug": "info-edge-ventures",
+    "name": "Info Edge Ventures",
+    "type": "vc"
+  },
+  {
+    "slug": "unicorn-india-ventures",
+    "name": "Unicorn India Ventures",
+    "type": "vc"
+  },
+  {
+    "slug": "tdk-ventures",
+    "name": "TDK Ventures",
+    "type": "vc"
+  },
+  {
+    "slug": "kotak-alternate-asset-managers",
+    "name": "Kotak Alternate Asset Managers",
+    "type": "vc"
+  },
+  {
+    "slug": "shipsfocus-ventures",
+    "name": "ShipsFocus Ventures",
+    "type": "vc"
+  },
+  {
+    "slug": "katapult-ocean",
+    "name": "Katapult Ocean",
+    "type": "vc"
+  },
+  {
+    "slug": "sginnovate",
+    "name": "SGInnovate",
+    "type": "vc"
+  },
+  {
+    "slug": "m7-holdings",
+    "name": "M7 Holdings",
+    "type": "vc"
+  },
+  {
+    "slug": "msg-ventures",
+    "name": "MSG Ventures",
+    "type": "vc"
+  },
+  {
+    "slug": "antariksh-venture-capital-fund",
+    "name": "Antariksh Venture Capital Fund",
+    "type": "vc"
+  },
+  {
+    "slug": "lightspeed-india-partners",
+    "name": "Lightspeed India Partners",
+    "type": "vc"
+  },
+  {
+    "slug": "y-combinator",
+    "name": "Y Combinator",
+    "type": "vc"
+  },
+  {
+    "slug": "peak-xv-partners",
+    "name": "Peak XV Partners",
+    "type": "vc"
+  },
+  {
+    "slug": "paul-graham",
+    "name": "Paul Graham",
+    "type": "vc"
+  },
+  {
+    "slug": "gokul-rajaram",
+    "name": "Gokul Rajaram",
+    "type": "vc"
+  },
+  {
+    "slug": "thariq-shihipar",
+    "name": "Thariq Shihipar",
+    "type": "vc"
+  },
+  {
+    "slug": "genrobotics",
+    "name": "Genrobotics",
+    "type": "vc"
+  },
+  {
+    "slug": "mela-ventures",
+    "name": "Mela Ventures",
+    "type": "vc"
+  },
+  {
+    "slug": "arali-ventures",
+    "name": "Arali Ventures",
+    "type": "vc"
+  },
+  {
+    "slug": "ideaspring-capital",
+    "name": "Ideaspring Capital",
+    "type": "vc"
+  },
+  {
+    "slug": "singularity-amc",
+    "name": "Singularity AMC",
+    "type": "vc"
+  },
+  {
+    "slug": "avatar-growth-capital",
+    "name": "Avatar Growth Capital",
+    "type": "vc"
+  },
+  {
+    "slug": "persistent-systems",
+    "name": "Persistent Systems",
+    "type": "vc"
+  },
+  {
+    "slug": "rainmatter",
+    "name": "Rainmatter",
+    "type": "vc"
+  },
+  {
+    "slug": "kiran-mazumdar-shaw",
+    "name": "Kiran Mazumdar-Shaw",
+    "type": "vc"
+  },
+  {
+    "slug": "eight-roads-ventures",
+    "name": "Eight Roads Ventures",
+    "type": "vc"
+  },
+  {
+    "slug": "f-prime-capital",
+    "name": "F-Prime Capital",
+    "type": "vc"
+  },
+  {
+    "slug": "ashish-kacholia-lucky-investment-managers",
+    "name": "Ashish Kacholia (Lucky Investment Managers)",
+    "type": "vc"
+  },
+  {
+    "slug": "speciale-invest",
+    "name": "Speciale Invest",
+    "type": "vc"
+  },
+  {
+    "slug": "antler-india",
+    "name": "Antler India",
+    "type": "vc"
+  },
+  {
+    "slug": "shastra-vc",
+    "name": "Shastra VC",
+    "type": "vc"
+  },
+  {
+    "slug": "finvolve",
+    "name": "Finvolve",
+    "type": "vc"
+  },
+  {
+    "slug": "india-accelerator",
+    "name": "India Accelerator",
+    "type": "vc"
+  },
+  {
+    "slug": "growthcap-venture-fund",
+    "name": "GrowthCap Venture Fund",
+    "type": "vc"
+  },
+  {
+    "slug": "artha-venture-fund",
+    "name": "Artha Venture Fund",
+    "type": "vc"
+  },
+  {
+    "slug": "activate",
+    "name": "Activate",
+    "type": "vc"
+  },
+  {
+    "slug": "antler",
+    "name": "Antler",
+    "type": "vc"
+  },
+  {
+    "slug": "spectrum-impact",
+    "name": "Spectrum Impact",
+    "type": "vc"
+  },
+  {
+    "slug": "devc",
+    "name": "DeVC",
+    "type": "vc"
+  },
+  {
+    "slug": "vijay-chandru",
+    "name": "Vijay Chandru",
+    "type": "vc"
+  },
+  {
+    "slug": "paras-chopra",
+    "name": "Paras Chopra",
+    "type": "vc"
+  },
+  {
+    "slug": "sanjiv-rangrass",
+    "name": "Sanjiv Rangrass",
+    "type": "vc"
+  },
+  {
+    "slug": "vatsal-dusad",
+    "name": "Vatsal Dusad",
+    "type": "vc"
+  },
+  {
+    "slug": "version-one-ventures",
+    "name": "Version One Ventures",
+    "type": "vc"
+  },
+  {
+    "slug": "all-in-capital",
+    "name": "All In Capital",
+    "type": "vc"
+  },
+  {
+    "slug": "unisol",
+    "name": "Unisol",
+    "type": "vc"
+  },
+  {
+    "slug": "iseed",
+    "name": "iSeed",
+    "type": "vc"
+  },
+  {
+    "slug": "soumith-chintala",
+    "name": "Soumith Chintala",
+    "type": "vc"
+  },
+  {
+    "slug": "adarsh-kulkarni",
+    "name": "Adarsh Kulkarni",
+    "type": "vc"
+  },
+  {
+    "slug": "ashish-kulkarni",
+    "name": "Ashish Kulkarni",
+    "type": "vc"
+  },
+  {
+    "slug": "vaibhav-domkundwar",
+    "name": "Vaibhav Domkundwar",
+    "type": "vc"
+  },
+  {
+    "slug": "lowercarbon-capital",
+    "name": "Lowercarbon Capital",
+    "type": "vc"
+  },
+  {
+    "slug": "good-capital",
+    "name": "Good Capital",
+    "type": "vc"
+  },
+  {
+    "slug": "ms-dhoni",
+    "name": "MS Dhoni",
+    "type": "vc"
+  },
+  {
+    "slug": "hero-enterprise-family-office",
+    "name": "Hero Enterprise Family Office",
+    "type": "vc"
+  },
+  {
+    "slug": "luthra-group",
+    "name": "Luthra Group",
+    "type": "vc"
+  },
+  {
+    "slug": "sbi-ventures",
+    "name": "SBI Ventures Limited",
+    "type": "vc"
+  },
+  {
+    "slug": "rainmatter-capital",
+    "name": "Rainmatter Capital",
+    "type": "vc"
+  },
+  {
+    "slug": "8x-ventures",
+    "name": "8X Ventures",
+    "type": "vc"
+  },
+  {
+    "slug": "galaxeye",
+    "name": "GalaxEye",
+    "type": "vc"
+  },
+  {
+    "slug": "pullela-gopichand",
+    "name": "Pullela Gopichand",
+    "type": "vc"
+  },
+  {
+    "slug": "rohit-chennamaneni-darwinbox",
+    "name": "Rohit Chennamaneni (Darwinbox)",
+    "type": "vc"
+  },
+  {
+    "slug": "nandan-reddy-swiggy",
+    "name": "Nandan Reddy (Swiggy)",
+    "type": "vc"
+  },
+  {
+    "slug": "accel",
+    "name": "Accel",
+    "type": "vc"
+  },
+  {
+    "slug": "bharat-innovation-fund",
+    "name": "Bharat Innovation Fund",
+    "type": "vc"
+  },
+  {
+    "slug": "premji-invest",
+    "name": "Premji Invest",
+    "type": "vc"
+  },
+  {
+    "slug": "ashish-kacholia",
+    "name": "Ashish Kacholia",
+    "type": "vc"
+  },
+  {
+    "slug": "raj-dandu",
+    "name": "Raj Dandu",
+    "type": "vc"
   }
 ]

@@ -1,0 +1,52 @@
+{
+  "id": "rekise-marine-2026-06-12-seed",
+  "status": "pending",
+  "company_name": "Rekise Marine",
+  "company_slug": "rekise-marine",
+  "company_description": "Advanced hardware and maritime robotics company for automated marine operations",
+  "city": null,
+  "vertical": "advanced-manufacturing",
+  "subsector": "robotics",
+  "is_adjacent": false,
+  "announced_on": "2026-06-12",
+  "kind": "equity",
+  "stage": "seed",
+  "amount_inr": 922664000,
+  "amount_usd": 9700000,
+  "currency_original": "USD",
+  "is_undisclosed": false,
+  "investors": [
+    {
+      "name": "Accel",
+      "is_lead": true
+    },
+    {
+      "name": "NKSquared",
+      "is_lead": true
+    },
+    {
+      "name": "Sameer Brij Verma",
+      "is_lead": false
+    },
+    {
+      "name": "Sandeep Singhal",
+      "is_lead": false
+    },
+    {
+      "name": "Industrial47",
+      "is_lead": false
+    },
+    {
+      "name": "Singularity AMC",
+      "is_lead": false
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://inc42.com/buzz/from-gps-renewables-to-equal-ai-indian-startups-raised-243-mn-this-week/",
+      "publisher": "Inc42 Funding Galore",
+      "fetched_at": "2026-10-02T05:36:18+00:00"
+    }
+  ],
+  "confidence": 0.65
+}

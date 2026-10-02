@@ -1,0 +1,44 @@
+{
+  "id": "khageshvara-aviation-2026-07-21-unknown",
+  "status": "pending",
+  "company_name": "Khageshvara Aviation Technology",
+  "company_slug": "khageshvara-aviation",
+  "company_description": "Aerial vehicle and drone technology development company.",
+  "city": null,
+  "vertical": "space-defence",
+  "subsector": "drones",
+  "is_adjacent": false,
+  "announced_on": "2026-07-21",
+  "kind": "equity",
+  "stage": "unknown",
+  "amount_inr": null,
+  "amount_usd": null,
+  "currency_original": null,
+  "is_undisclosed": true,
+  "investors": [
+    {
+      "name": "Finvolve",
+      "is_lead": true
+    },
+    {
+      "name": "India Accelerator",
+      "is_lead": true
+    },
+    {
+      "name": "Rukam Capital",
+      "is_lead": false
+    },
+    {
+      "name": "ACIC-VGU",
+      "is_lead": false
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://inc42.com/buzz/from-zetwerk-to-veriqus-indian-startups-raised-209-mn-this-week/",
+      "publisher": "Inc42 Funding Galore",
+      "fetched_at": "2026-10-02T05:33:53+00:00"
+    }
+  ],
+  "confidence": 0.75
+}

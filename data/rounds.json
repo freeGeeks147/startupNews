@@ -81,5 +81,975 @@
     ],
     "reviewed": false,
     "note": null
+  },
+  {
+    "id": "airbound-2026-08-25-A",
+    "company": "airbound",
+    "announced_on": "2026-08-25",
+    "kind": "equity",
+    "stage": "A",
+    "amount_inr": 3530540000,
+    "amount_usd": 37000000,
+    "currency_original": "USD",
+    "is_undisclosed": false,
+    "investors": [
+      {
+        "slug": "greenoaks",
+        "is_lead": true
+      },
+      {
+        "slug": "doordash",
+        "is_lead": false
+      },
+      {
+        "slug": "lachy-groom-physical-intelligence",
+        "is_lead": false
+      },
+      {
+        "slug": "lightspeed",
+        "is_lead": false
+      },
+      {
+        "slug": "humba-ventures",
+        "is_lead": false
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://inc42.com/buzz/from-third-wave-coffee-to-matter-indian-startups-raised-over-210-mn-this-week/",
+        "publisher": "Inc42 Funding Galore"
+      }
+    ],
+    "reviewed": false,
+    "note": null
+  },
+  {
+    "id": "alteon-2026-09-04-pre-seed",
+    "company": "alteon",
+    "announced_on": "2026-09-04",
+    "kind": "equity",
+    "stage": "pre-seed",
+    "amount_inr": 236225000,
+    "amount_usd": 2500000,
+    "currency_original": "USD",
+    "is_undisclosed": false,
+    "investors": [
+      {
+        "slug": "lachy-groom",
+        "is_lead": true
+      },
+      {
+        "slug": "together-fund",
+        "is_lead": false
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://inc42.com/buzz/from-ultrahuman-to-comet-indian-startups-raised-over-177-mn-this-week/",
+        "publisher": "Inc42 Funding Galore"
+      }
+    ],
+    "reviewed": false,
+    "note": null
+  },
+  {
+    "id": "anscer-robotics-2026-05-19-A",
+    "company": "anscer-robotics",
+    "announced_on": "2026-05-19",
+    "kind": "equity",
+    "stage": "A",
+    "amount_inr": 444084000,
+    "amount_usd": 4600000,
+    "currency_original": "USD",
+    "is_undisclosed": false,
+    "investors": [
+      {
+        "slug": "india-angel-network",
+        "is_lead": true
+      },
+      {
+        "slug": "info-edge-ventures",
+        "is_lead": false
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://inc42.com/buzz/from-scapia-to-mythik-indian-startups-raised-92-mn-this-week/",
+        "publisher": "Inc42 Funding Galore"
+      }
+    ],
+    "reviewed": false,
+    "note": null
+  },
+  {
+    "id": "bioscan-research-2026-07-22-seed",
+    "company": "bioscan-research",
+    "announced_on": "2026-07-22",
+    "kind": "equity",
+    "stage": "seed",
+    "amount_inr": 96570000,
+    "amount_usd": 1000000,
+    "currency_original": "USD",
+    "is_undisclosed": false,
+    "investors": [
+      {
+        "slug": "unicorn-india-ventures",
+        "is_lead": true
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://inc42.com/buzz/from-zetwerk-to-veriqus-indian-startups-raised-209-mn-this-week/",
+        "publisher": "Inc42 Funding Galore"
+      }
+    ],
+    "reviewed": false,
+    "note": null
+  },
+  {
+    "id": "c2i-semiconductors-2026-05-28-A",
+    "company": "c2i-semiconductors",
+    "announced_on": "2026-05-28",
+    "kind": "equity",
+    "stage": "A",
+    "amount_inr": 162690000,
+    "amount_usd": 1700000,
+    "currency_original": "USD",
+    "is_undisclosed": false,
+    "investors": [
+      {
+        "slug": "tdk-ventures",
+        "is_lead": true
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://inc42.com/buzz/from-fairdeal-market-to-abcoffee-indian-startups-raised-52-mn-this-week/",
+        "publisher": "Inc42 Funding Galore"
+      }
+    ],
+    "reviewed": false,
+    "note": null
+  },
+  {
+    "id": "c2i-semiconductors-2026-08-29-acquisition",
+    "company": "c2i-semiconductors",
+    "announced_on": "2026-08-29",
+    "kind": "acquisition",
+    "stage": "acquisition",
+    "amount_inr": null,
+    "amount_usd": null,
+    "currency_original": null,
+    "is_undisclosed": true,
+    "investors": [],
+    "sources": [
+      {
+        "url": "https://inc42.com/buzz/from-third-wave-coffee-to-matter-indian-startups-raised-over-210-mn-this-week/",
+        "publisher": "Inc42 Funding Galore"
+      }
+    ],
+    "reviewed": false,
+    "note": null
+  },
+  {
+    "id": "cellogen-therapeutics-2026-05-18-unknown",
+    "company": "cellogen-therapeutics",
+    "announced_on": "2026-05-18",
+    "kind": "equity",
+    "stage": "unknown",
+    "amount_inr": 202335000,
+    "amount_usd": 2100000,
+    "currency_original": "USD",
+    "is_undisclosed": false,
+    "investors": [
+      {
+        "slug": "kotak-alternate-asset-managers",
+        "is_lead": true
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://inc42.com/buzz/from-scapia-to-mythik-indian-startups-raised-92-mn-this-week/",
+        "publisher": "Inc42 Funding Galore"
+      }
+    ],
+    "reviewed": false,
+    "note": null
+  },
+  {
+    "id": "clear-robotics-2026-06-08-seed",
+    "company": "clear-robotics",
+    "announced_on": "2026-06-08",
+    "kind": "equity",
+    "stage": "seed",
+    "amount_inr": 172278000,
+    "amount_usd": 1800000,
+    "currency_original": "USD",
+    "is_undisclosed": false,
+    "investors": [
+      {
+        "slug": "shipsfocus-ventures",
+        "is_lead": true
+      },
+      {
+        "slug": "katapult-ocean",
+        "is_lead": true
+      },
+      {
+        "slug": "sginnovate",
+        "is_lead": false
+      },
+      {
+        "slug": "m7-holdings",
+        "is_lead": false
+      },
+      {
+        "slug": "msg-ventures",
+        "is_lead": false
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://inc42.com/buzz/from-gps-renewables-to-equal-ai-indian-startups-raised-243-mn-this-week/",
+        "publisher": "Inc42 Funding Galore"
+      }
+    ],
+    "reviewed": false,
+    "note": null
+  },
+  {
+    "id": "dhruva-space-2026-07-13-A",
+    "company": "dhruva-space",
+    "announced_on": "2026-07-13",
+    "kind": "equity",
+    "stage": "A",
+    "amount_inr": 602406000,
+    "amount_usd": 6300000,
+    "currency_original": "USD",
+    "is_undisclosed": false,
+    "investors": [
+      {
+        "slug": "antariksh-venture-capital-fund",
+        "is_lead": true
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://inc42.com/buzz/from-emergent-to-neo-group-indian-startups-raised-281-mn-this-week/",
+        "publisher": "Inc42 Funding Galore"
+      }
+    ],
+    "reviewed": false,
+    "note": null
+  },
+  {
+    "id": "discovered-materials-2026-08-11-seed",
+    "company": "discovered-materials",
+    "announced_on": "2026-08-11",
+    "kind": "equity",
+    "stage": "seed",
+    "amount_inr": 858960000,
+    "amount_usd": 9000000,
+    "currency_original": "USD",
+    "is_undisclosed": false,
+    "investors": [
+      {
+        "slug": "lightspeed-india-partners",
+        "is_lead": true
+      },
+      {
+        "slug": "y-combinator",
+        "is_lead": false
+      },
+      {
+        "slug": "peak-xv-partners",
+        "is_lead": false
+      },
+      {
+        "slug": "paul-graham",
+        "is_lead": false
+      },
+      {
+        "slug": "gokul-rajaram",
+        "is_lead": false
+      },
+      {
+        "slug": "thariq-shihipar",
+        "is_lead": false
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://inc42.com/buzz/from-yulu-to-discovered-materials-indian-startups-raised-140-mn-this-week/",
+        "publisher": "Inc42 Funding Galore"
+      }
+    ],
+    "reviewed": false,
+    "note": null
+  },
+  {
+    "id": "estro-tech-robotics-2026-06-04-seed",
+    "company": "estro-tech-robotics",
+    "announced_on": "2026-06-04",
+    "kind": "equity",
+    "stage": "seed",
+    "amount_inr": 10056900,
+    "amount_usd": 105000,
+    "currency_original": "USD",
+    "is_undisclosed": false,
+    "investors": [
+      {
+        "slug": "genrobotics",
+        "is_lead": true
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://inc42.com/buzz/from-firstclub-to-innefu-indian-startups-raised-187-mn-this-week/",
+        "publisher": "Inc42 Funding Galore"
+      }
+    ],
+    "reviewed": false,
+    "note": null
+  },
+  {
+    "id": "flo-mobility-2026-05-11-seed",
+    "company": "flo-mobility",
+    "announced_on": "2026-05-11",
+    "kind": "equity",
+    "stage": "seed",
+    "amount_inr": 238300000,
+    "amount_usd": 2500000,
+    "currency_original": "USD",
+    "is_undisclosed": false,
+    "investors": [
+      {
+        "slug": "mela-ventures",
+        "is_lead": true
+      },
+      {
+        "slug": "arali-ventures",
+        "is_lead": false
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://inc42.com/buzz/from-rapido-to-hrdwyr-indian-startups-raised-303-mn-this-week/",
+        "publisher": "Inc42 Funding Galore"
+      }
+    ],
+    "reviewed": false,
+    "note": null
+  },
+  {
+    "id": "hrdwyr-2026-05-12-A",
+    "company": "hrdwyr",
+    "announced_on": "2026-05-12",
+    "kind": "equity",
+    "stage": "A",
+    "amount_inr": 1243320000,
+    "amount_usd": 13000000,
+    "currency_original": "USD",
+    "is_undisclosed": false,
+    "investors": [
+      {
+        "slug": "ideaspring-capital",
+        "is_lead": true
+      },
+      {
+        "slug": "singularity-amc",
+        "is_lead": false
+      },
+      {
+        "slug": "avatar-growth-capital",
+        "is_lead": false
+      },
+      {
+        "slug": "persistent-systems",
+        "is_lead": false
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://inc42.com/buzz/from-rapido-to-hrdwyr-indian-startups-raised-303-mn-this-week/",
+        "publisher": "Inc42 Funding Galore"
+      }
+    ],
+    "reviewed": false,
+    "note": null
+  },
+  {
+    "id": "ideaforge-2026-06-06-unknown",
+    "company": "ideaforge",
+    "announced_on": "2026-06-06",
+    "kind": "equity",
+    "stage": "unknown",
+    "amount_inr": 5000000000,
+    "amount_usd": 52659294,
+    "currency_original": "INR",
+    "is_undisclosed": false,
+    "investors": [],
+    "sources": [
+      {
+        "url": "https://inc42.com/buzz/from-firstclub-to-innefu-indian-startups-raised-187-mn-this-week/",
+        "publisher": "Inc42 Funding Galore"
+      }
+    ],
+    "reviewed": false,
+    "note": null
+  },
+  {
+    "id": "immuneel-therapeutics-2026-06-08-B",
+    "company": "immuneel-therapeutics",
+    "announced_on": "2026-06-08",
+    "kind": "equity",
+    "stage": "B",
+    "amount_inr": 1004955000,
+    "amount_usd": 10500000,
+    "currency_original": "USD",
+    "is_undisclosed": false,
+    "investors": [
+      {
+        "slug": "singularity-amc",
+        "is_lead": true
+      },
+      {
+        "slug": "rainmatter",
+        "is_lead": true
+      },
+      {
+        "slug": "kiran-mazumdar-shaw",
+        "is_lead": false
+      },
+      {
+        "slug": "eight-roads-ventures",
+        "is_lead": false
+      },
+      {
+        "slug": "f-prime-capital",
+        "is_lead": false
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://inc42.com/buzz/from-gps-renewables-to-equal-ai-indian-startups-raised-243-mn-this-week/",
+        "publisher": "Inc42 Funding Galore"
+      }
+    ],
+    "reviewed": false,
+    "note": null
+  },
+  {
+    "id": "inspecity-2026-08-27-A",
+    "company": "inspecity",
+    "announced_on": "2026-08-27",
+    "kind": "equity",
+    "stage": "A",
+    "amount_inr": 993616000,
+    "amount_usd": 10400000,
+    "currency_original": "USD",
+    "is_undisclosed": false,
+    "investors": [
+      {
+        "slug": "ashish-kacholia-lucky-investment-managers",
+        "is_lead": true
+      },
+      {
+        "slug": "speciale-invest",
+        "is_lead": true
+      },
+      {
+        "slug": "antler-india",
+        "is_lead": false
+      },
+      {
+        "slug": "shastra-vc",
+        "is_lead": false
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://inc42.com/buzz/from-third-wave-coffee-to-matter-indian-startups-raised-over-210-mn-this-week/",
+        "publisher": "Inc42 Funding Galore"
+      }
+    ],
+    "reviewed": false,
+    "note": null
+  },
+  {
+    "id": "integra-robotics-2026-06-09-seed",
+    "company": "integra-robotics",
+    "announced_on": "2026-06-09",
+    "kind": "equity",
+    "stage": "seed",
+    "amount_inr": 104885000,
+    "amount_usd": 1100000,
+    "currency_original": "USD",
+    "is_undisclosed": false,
+    "investors": [
+      {
+        "slug": "finvolve",
+        "is_lead": true
+      },
+      {
+        "slug": "india-accelerator",
+        "is_lead": false
+      },
+      {
+        "slug": "growthcap-venture-fund",
+        "is_lead": false
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://inc42.com/buzz/from-gps-renewables-to-equal-ai-indian-startups-raised-243-mn-this-week/",
+        "publisher": "Inc42 Funding Galore"
+      }
+    ],
+    "reviewed": false,
+    "note": null
+  },
+  {
+    "id": "kshatralabs-2026-08-13-unknown",
+    "company": "kshatralabs",
+    "announced_on": "2026-08-13",
+    "kind": "equity",
+    "stage": "unknown",
+    "amount_inr": null,
+    "amount_usd": null,
+    "currency_original": null,
+    "is_undisclosed": true,
+    "investors": [
+      {
+        "slug": "finvolve",
+        "is_lead": true
+      },
+      {
+        "slug": "india-accelerator",
+        "is_lead": false
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://inc42.com/buzz/from-yulu-to-discovered-materials-indian-startups-raised-140-mn-this-week/",
+        "publisher": "Inc42 Funding Galore"
+      }
+    ],
+    "reviewed": false,
+    "note": null
+  },
+  {
+    "id": "makr-microsystems-2026-09-03-seed",
+    "company": "makr-microsystems",
+    "announced_on": "2026-09-03",
+    "kind": "equity",
+    "stage": "seed",
+    "amount_inr": 103939000,
+    "amount_usd": 1100000,
+    "currency_original": "USD",
+    "is_undisclosed": false,
+    "investors": [
+      {
+        "slug": "bluehill-vc",
+        "is_lead": true
+      },
+      {
+        "slug": "artha-venture-fund",
+        "is_lead": false
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://inc42.com/buzz/from-ultrahuman-to-comet-indian-startups-raised-over-177-mn-this-week/",
+        "publisher": "Inc42 Funding Galore"
+      }
+    ],
+    "reviewed": false,
+    "note": null
+  },
+  {
+    "id": "mandrake-bio-2026-07-16-pre-seed",
+    "company": "mandrake-bio",
+    "announced_on": "2026-07-16",
+    "kind": "equity",
+    "stage": "pre-seed",
+    "amount_inr": 163795000,
+    "amount_usd": 1700000,
+    "currency_original": "USD",
+    "is_undisclosed": false,
+    "investors": [
+      {
+        "slug": "activate",
+        "is_lead": true
+      },
+      {
+        "slug": "antler",
+        "is_lead": true
+      },
+      {
+        "slug": "spectrum-impact",
+        "is_lead": false
+      },
+      {
+        "slug": "devc",
+        "is_lead": false
+      },
+      {
+        "slug": "vijay-chandru",
+        "is_lead": false
+      },
+      {
+        "slug": "paras-chopra",
+        "is_lead": false
+      },
+      {
+        "slug": "sanjiv-rangrass",
+        "is_lead": false
+      },
+      {
+        "slug": "vatsal-dusad",
+        "is_lead": false
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://inc42.com/buzz/from-emergent-to-neo-group-indian-startups-raised-281-mn-this-week/",
+        "publisher": "Inc42 Funding Galore"
+      }
+    ],
+    "reviewed": false,
+    "note": null
+  },
+  {
+    "id": "mowito-2026-07-07-pre-seed",
+    "company": "mowito",
+    "announced_on": "2026-07-07",
+    "kind": "equity",
+    "stage": "pre-seed",
+    "amount_inr": 284910000,
+    "amount_usd": 3000000,
+    "currency_original": "USD",
+    "is_undisclosed": false,
+    "investors": [
+      {
+        "slug": "version-one-ventures",
+        "is_lead": true
+      },
+      {
+        "slug": "all-in-capital",
+        "is_lead": false
+      },
+      {
+        "slug": "unisol",
+        "is_lead": false
+      },
+      {
+        "slug": "iseed",
+        "is_lead": false
+      },
+      {
+        "slug": "soumith-chintala",
+        "is_lead": false
+      },
+      {
+        "slug": "adarsh-kulkarni",
+        "is_lead": false
+      },
+      {
+        "slug": "ashish-kulkarni",
+        "is_lead": false
+      },
+      {
+        "slug": "vaibhav-domkundwar",
+        "is_lead": false
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://inc42.com/features/from-elevate-education-to-aukera-indian-startups-raised-72-mn-this-week/",
+        "publisher": "Inc42 Funding Galore"
+      }
+    ],
+    "reviewed": false,
+    "note": null
+  },
+  {
+    "id": "skyroot-aerospace-2026-08-08-unknown",
+    "company": "skyroot-aerospace",
+    "announced_on": "2026-08-08",
+    "kind": "equity",
+    "stage": "unknown",
+    "amount_inr": 19042000000,
+    "amount_usd": 200000000,
+    "currency_original": "USD",
+    "is_undisclosed": false,
+    "investors": [],
+    "sources": [
+      {
+        "url": "https://inc42.com/buzz/from-river-mobility-to-blissclub-indian-startups-raised-274-mn-this-week/",
+        "publisher": "Inc42 Funding Galore"
+      }
+    ],
+    "reviewed": false,
+    "note": null
+  },
+  {
+    "id": "solarsquare-2026-06-16-C+",
+    "company": "solarsquare",
+    "announced_on": "2026-06-16",
+    "kind": "equity",
+    "stage": "C+",
+    "amount_inr": 5011680000,
+    "amount_usd": 53000000,
+    "currency_original": "USD",
+    "is_undisclosed": false,
+    "investors": [
+      {
+        "slug": "lightspeed",
+        "is_lead": true
+      },
+      {
+        "slug": "lowercarbon-capital",
+        "is_lead": false
+      },
+      {
+        "slug": "rainmatter",
+        "is_lead": false
+      },
+      {
+        "slug": "good-capital",
+        "is_lead": false
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://inc42.com/buzz/from-sarvam-to-influish-indian-startups-raised-426-mn-this-week/",
+        "publisher": "Inc42 Funding Galore"
+      }
+    ],
+    "reviewed": false,
+    "note": null
+  },
+  {
+    "id": "solarsquare-2026-07-21-C+",
+    "company": "solarsquare",
+    "announced_on": "2026-07-21",
+    "kind": "equity",
+    "stage": "C+",
+    "amount_inr": null,
+    "amount_usd": null,
+    "currency_original": null,
+    "is_undisclosed": true,
+    "investors": [
+      {
+        "slug": "ms-dhoni",
+        "is_lead": true
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://inc42.com/buzz/from-zetwerk-to-veriqus-indian-startups-raised-209-mn-this-week/",
+        "publisher": "Inc42 Funding Galore"
+      }
+    ],
+    "reviewed": false,
+    "note": null
+  },
+  {
+    "id": "solinas-integrity-2026-08-06-A",
+    "company": "solinas-integrity",
+    "announced_on": "2026-08-06",
+    "kind": "equity",
+    "stage": "A",
+    "amount_inr": 523765000,
+    "amount_usd": 5500000,
+    "currency_original": "USD",
+    "is_undisclosed": false,
+    "investors": [
+      {
+        "slug": "mela-ventures",
+        "is_lead": true
+      },
+      {
+        "slug": "hero-enterprise-family-office",
+        "is_lead": true
+      },
+      {
+        "slug": "luthra-group",
+        "is_lead": false
+      },
+      {
+        "slug": "sbi-ventures",
+        "is_lead": false
+      },
+      {
+        "slug": "rainmatter-capital",
+        "is_lead": false
+      },
+      {
+        "slug": "8x-ventures",
+        "is_lead": false
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://inc42.com/buzz/from-river-mobility-to-blissclub-indian-startups-raised-274-mn-this-week/",
+        "publisher": "Inc42 Funding Galore"
+      }
+    ],
+    "reviewed": false,
+    "note": null
+  },
+  {
+    "id": "starops-2026-08-15-acquisition",
+    "company": "starops",
+    "announced_on": "2026-08-15",
+    "kind": "acquisition",
+    "stage": "acquisition",
+    "amount_inr": null,
+    "amount_usd": null,
+    "currency_original": null,
+    "is_undisclosed": true,
+    "investors": [
+      {
+        "slug": "galaxeye",
+        "is_lead": true
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://inc42.com/buzz/from-yulu-to-discovered-materials-indian-startups-raised-140-mn-this-week/",
+        "publisher": "Inc42 Funding Galore"
+      }
+    ],
+    "reviewed": false,
+    "note": null
+  },
+  {
+    "id": "temple-2026-08-29-acquisition",
+    "company": "temple",
+    "announced_on": "2026-08-29",
+    "kind": "acquisition",
+    "stage": "acquisition",
+    "amount_inr": null,
+    "amount_usd": null,
+    "currency_original": null,
+    "is_undisclosed": true,
+    "investors": [],
+    "sources": [
+      {
+        "url": "https://inc42.com/buzz/from-third-wave-coffee-to-matter-indian-startups-raised-over-210-mn-this-week/",
+        "publisher": "Inc42 Funding Galore"
+      }
+    ],
+    "reviewed": false,
+    "note": null
+  },
+  {
+    "id": "water-robotics-2026-08-24-unknown",
+    "company": "water-robotics",
+    "announced_on": "2026-08-24",
+    "kind": "equity",
+    "stage": "unknown",
+    "amount_inr": 239400000,
+    "amount_usd": 2500000,
+    "currency_original": "USD",
+    "is_undisclosed": false,
+    "investors": [
+      {
+        "slug": "endiya-partners",
+        "is_lead": true
+      },
+      {
+        "slug": "pullela-gopichand",
+        "is_lead": false
+      },
+      {
+        "slug": "rohit-chennamaneni-darwinbox",
+        "is_lead": false
+      },
+      {
+        "slug": "nandan-reddy-swiggy",
+        "is_lead": false
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://inc42.com/buzz/from-third-wave-coffee-to-matter-indian-startups-raised-over-210-mn-this-week/",
+        "publisher": "Inc42 Funding Galore"
+      }
+    ],
+    "reviewed": false,
+    "note": null
+  },
+  {
+    "id": "zoppler-systems-2026-08-04-unknown",
+    "company": "zoppler-systems",
+    "announced_on": "2026-08-04",
+    "kind": "equity",
+    "stage": "unknown",
+    "amount_inr": 65144540,
+    "amount_usd": 683000,
+    "currency_original": "USD",
+    "is_undisclosed": false,
+    "investors": [
+      {
+        "slug": "finvolve",
+        "is_lead": true
+      },
+      {
+        "slug": "india-accelerator",
+        "is_lead": true
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://inc42.com/buzz/from-river-mobility-to-blissclub-indian-startups-raised-274-mn-this-week/",
+        "publisher": "Inc42 Funding Galore"
+      }
+    ],
+    "reviewed": false,
+    "note": null
+  },
+  {
+    "id": "zumutor-biologics-2026-06-13-B",
+    "company": "zumutor-biologics",
+    "announced_on": "2026-06-13",
+    "kind": "equity",
+    "stage": "B",
+    "amount_inr": 694376000,
+    "amount_usd": 7300000,
+    "currency_original": "USD",
+    "is_undisclosed": false,
+    "investors": [
+      {
+        "slug": "accel",
+        "is_lead": true
+      },
+      {
+        "slug": "bharat-innovation-fund",
+        "is_lead": true
+      },
+      {
+        "slug": "premji-invest",
+        "is_lead": false
+      },
+      {
+        "slug": "ashish-kacholia",
+        "is_lead": false
+      },
+      {
+        "slug": "raj-dandu",
+        "is_lead": false
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://inc42.com/buzz/from-sarvam-to-influish-indian-startups-raised-426-mn-this-week/",
+        "publisher": "Inc42 Funding Galore"
+      }
+    ],
+    "reviewed": false,
+    "note": null
   }
 ]

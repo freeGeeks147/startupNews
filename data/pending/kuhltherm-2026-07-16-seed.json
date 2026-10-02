@@ -1,0 +1,32 @@
+{
+  "id": "kuhltherm-2026-07-16-seed",
+  "status": "pending",
+  "company_name": "KuhlTherm",
+  "company_slug": "kuhltherm",
+  "company_description": "A semiconductor technology company developing thermal management solutions.",
+  "city": null,
+  "vertical": "semis-computing",
+  "subsector": "chip-design",
+  "is_adjacent": false,
+  "announced_on": "2026-07-16",
+  "kind": "equity",
+  "stage": "seed",
+  "amount_inr": 105985000,
+  "amount_usd": 1100000,
+  "currency_original": "USD",
+  "is_undisclosed": false,
+  "investors": [
+    {
+      "name": "Arkam Ventures",
+      "is_lead": true
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://inc42.com/buzz/from-emergent-to-neo-group-indian-startups-raised-281-mn-this-week/",
+      "publisher": "Inc42 Funding Galore",
+      "fetched_at": "2026-10-02T05:33:13+00:00"
+    }
+  ],
+  "confidence": 0.7
+}
