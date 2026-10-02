@@ -1,0 +1,52 @@
+{
+  "id": "river-2026-09-30-unknown",
+  "status": "pending",
+  "company_name": "River",
+  "company_slug": "river",
+  "company_description": "An electric vehicle manufacturer",
+  "city": null,
+  "vertical": "energy-climate",
+  "subsector": "batteries",
+  "is_adjacent": true,
+  "announced_on": "2026-09-30",
+  "kind": "equity",
+  "stage": "unknown",
+  "amount_inr": 11499600000,
+  "amount_usd": 120000000,
+  "currency_original": "USD",
+  "is_undisclosed": false,
+  "investors": [
+    {
+      "name": "Elev8 Venture Partners",
+      "is_lead": true
+    },
+    {
+      "name": "Claypond Capital",
+      "is_lead": false
+    },
+    {
+      "name": "Anicut Capital",
+      "is_lead": false
+    },
+    {
+      "name": "Alteria Capital",
+      "is_lead": false
+    },
+    {
+      "name": "InnoVen Capital",
+      "is_lead": false
+    },
+    {
+      "name": "Stride Ventures",
+      "is_lead": false
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://inc42.com/buzz/startup-funding-crawls-up-5-yoy-to-2-2-bn-in-q3-2026-as-investors-get-picky/",
+      "publisher": "Inc42",
+      "fetched_at": "2026-10-02T08:55:38+00:00"
+    }
+  ],
+  "confidence": 0.75
+}

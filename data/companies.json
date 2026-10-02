@@ -98,90 +98,98 @@
   {
     "slug": "cellogen-therapeutics",
     "name": "Cellogen Therapeutics",
-    "website": null,
-    "city": "",
-    "founded_year": null,
+    "website": "https://www.cellogentherapeutics.com/",
+    "city": "Delhi NCR",
+    "founded_year": 2021,
     "vertical": "healthtech",
     "subsector": "biotech",
     "is_adjacent": false,
-    "description": "A biotech and lifesciences company developing cell-based therapeutics"
+    "description": "Cellogen Therapeutics develops CAR-T cell therapies and gene therapies to treat blood cancers and genetic disorders such as beta-thalassemia and sickle cell disease. The company uses advanced cellular engineering and CRISPR-based approaches to design and manufacture these treatments.",
+    "enriched_on": "2026-10-02"
   },
   {
     "slug": "clear-robotics",
     "name": "Clear Robotics",
-    "website": null,
-    "city": "",
-    "founded_year": null,
+    "website": "https://www.clearbot.org/",
+    "city": "Bengaluru",
+    "founded_year": 2020,
     "vertical": "advanced-manufacturing",
     "subsector": "robotics",
     "is_adjacent": false,
-    "description": "Maritime robotics company developing autonomous underwater and marine systems"
+    "description": "Clear Robotics builds all-electric autonomous unmanned surface vessels for maritime surveying, waste removal, and water management tasks. Their fleet performs services for port authorities, municipalities, and environmental organizations.",
+    "enriched_on": "2026-10-02"
   },
   {
     "slug": "dhruva-space",
     "name": "Dhruva Space",
-    "website": null,
-    "city": "",
-    "founded_year": null,
+    "website": "https://www.dhruvaspace.com/",
+    "city": "Hyderabad",
+    "founded_year": 2012,
     "vertical": "space-defence",
     "subsector": "space-propulsion",
     "is_adjacent": false,
-    "description": "A space technology company developing satellite and spacecraft propulsion systems."
+    "description": "Develops satellite platforms, launch deployers, and ground stations for satellite communications and space missions. Provides end-to-end space engineering solutions including satellite manufacturing, launch integration, and ground operations.",
+    "enriched_on": "2026-10-02"
   },
   {
     "slug": "discovered-materials",
     "name": "Discovered Materials",
-    "website": null,
+    "website": "https://discoveredmaterials.com/",
     "city": "",
-    "founded_year": null,
+    "founded_year": 2026,
     "vertical": "advanced-manufacturing",
     "subsector": "advanced-materials",
     "is_adjacent": false,
-    "description": "Advanced materials science company developing novel semiconductor materials"
+    "description": "Develops AI agents to discover novel semiconductor materials, focusing on thermal management solutions to address extreme heat dissipation challenges in AI chips.",
+    "enriched_on": "2026-10-02"
   },
   {
     "slug": "estro-tech-robotics",
     "name": "Estro Tech Robotics",
-    "website": null,
-    "city": "",
-    "founded_year": null,
+    "website": "https://www.estrotech.in/",
+    "city": "Thrissur",
+    "founded_year": 2020,
     "vertical": "advanced-manufacturing",
     "subsector": "robotics",
     "is_adjacent": false,
-    "description": "A robotics company developing advanced hardware and technology solutions for B2B markets."
+    "description": "Estro Tech Robotics develops interactive robotic platforms for retail marketing (RobAd combines robotics with light, sound, and AI analytics) and advanced inspection robots for infrastructure and utility management applications.",
+    "enriched_on": "2026-10-02"
   },
   {
     "slug": "flo-mobility",
     "name": "Flo Mobility",
-    "website": null,
-    "city": "",
-    "founded_year": null,
+    "website": "https://www.flomobility.com/",
+    "city": "Bengaluru",
+    "founded_year": 2021,
     "vertical": "advanced-manufacturing",
     "subsector": "robotics",
     "is_adjacent": false,
-    "description": "Manufacturing robotics company"
+    "description": "Flo Mobility builds autonomous mobile robots that transport construction materials on job sites using AI and sensor technology. The robots operate via a subscription-based service model providing deployment, operation, and maintenance.",
+    "enriched_on": "2026-10-02"
   },
   {
     "slug": "hrdwyr",
     "name": "HrdWyr",
-    "website": null,
-    "city": "",
-    "founded_year": null,
+    "website": "https://www.hrdwyr.com/",
+    "city": "Bengaluru",
+    "founded_year": 2023,
     "vertical": "semis-computing",
     "subsector": "chip-design",
     "is_adjacent": false,
-    "description": "Semiconductor company"
+    "description": "HrdWyr designs artificial intelligence system-on-chip (AISoC) components for edge computing applications. The company creates specialized semiconductor chips for data centers, mobility systems, industrial infrastructure, and consumer devices.",
+    "enriched_on": "2026-10-02"
   },
   {
     "slug": "ideaforge",
     "name": "ideaForge",
-    "website": null,
-    "city": "",
-    "founded_year": null,
+    "website": "https://ideaforgetech.com/",
+    "city": "Navi Mumbai",
+    "founded_year": 2007,
     "vertical": "space-defence",
     "subsector": "drones",
     "is_adjacent": false,
-    "description": "A drone technology company developing advanced drone solutions."
+    "description": "ideaForge designs and manufactures unmanned aerial vehicles (UAVs) for defense and civilian applications, including surveillance, mapping, and border security. The company specializes in multi-rotor and hybrid vertical take-off and landing drone systems.",
+    "enriched_on": "2026-10-02"
   },
   {
     "slug": "immuneel-therapeutics",

@@ -1,0 +1,40 @@
+{
+  "id": "intellithink-2026-04-16-seed",
+  "status": "pending",
+  "company_name": "Intellithink",
+  "company_slug": "intellithink",
+  "company_description": "Develops IoT and hardware solutions for industrial applications",
+  "city": null,
+  "vertical": "advanced-manufacturing",
+  "subsector": "industrial-iot",
+  "is_adjacent": false,
+  "announced_on": "2026-04-16",
+  "kind": "equity",
+  "stage": "seed",
+  "amount_inr": 167832000,
+  "amount_usd": 1800000,
+  "currency_original": "USD",
+  "is_undisclosed": false,
+  "investors": [
+    {
+      "name": "Pentathlon Ventures",
+      "is_lead": true
+    },
+    {
+      "name": "Anicut Capital",
+      "is_lead": false
+    },
+    {
+      "name": "Veltis Capital",
+      "is_lead": false
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://inc42.com/buzz/from-hosteller-to-gobblecube-indian-startups-raised-60-mn-this-week/",
+      "publisher": "Inc42 Funding Galore",
+      "fetched_at": "2026-10-02T08:54:53+00:00"
+    }
+  ],
+  "confidence": 0.75
+}

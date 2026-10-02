@@ -1,0 +1,48 @@
+{
+  "id": "ivory-2026-04-15-seed",
+  "status": "pending",
+  "company_name": "Ivory",
+  "company_slug": "ivory",
+  "company_description": "Provides digital health diagnostics solutions",
+  "city": null,
+  "vertical": "healthtech",
+  "subsector": "ai-diagnostics",
+  "is_adjacent": false,
+  "announced_on": "2026-04-15",
+  "kind": "equity",
+  "stage": "seed",
+  "amount_inr": 93440000,
+  "amount_usd": 1000000,
+  "currency_original": "USD",
+  "is_undisclosed": false,
+  "investors": [
+    {
+      "name": "Draper Associates",
+      "is_lead": false
+    },
+    {
+      "name": "SAGE Venture Fund",
+      "is_lead": false
+    },
+    {
+      "name": "MoSJE",
+      "is_lead": false
+    },
+    {
+      "name": "IFCI Ventures",
+      "is_lead": false
+    },
+    {
+      "name": "SIDBI",
+      "is_lead": false
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://inc42.com/buzz/from-hosteller-to-gobblecube-indian-startups-raised-60-mn-this-week/",
+      "publisher": "Inc42 Funding Galore",
+      "fetched_at": "2026-10-02T08:54:53+00:00"
+    }
+  ],
+  "confidence": 0.75
+}

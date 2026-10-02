@@ -1,0 +1,36 @@
+{
+  "id": "vytalyou-2026-09-30-seed",
+  "status": "pending",
+  "company_name": "Vytalyou",
+  "company_slug": "vytalyou",
+  "company_description": "Preventive healthcare and longevity startup combining AI-based diagnostics with personalized medical interventions and regenerative therapies",
+  "city": "Mumbai",
+  "vertical": "healthtech",
+  "subsector": "ai-diagnostics",
+  "is_adjacent": false,
+  "announced_on": "2026-09-30",
+  "kind": "equity",
+  "stage": "seed",
+  "amount_inr": 90000000,
+  "amount_usd": 939163,
+  "currency_original": "INR",
+  "is_undisclosed": false,
+  "investors": [
+    {
+      "name": "Chetan Jain",
+      "is_lead": true
+    },
+    {
+      "name": "Ratan Jain",
+      "is_lead": false
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://entrackr.com/snippets/longevity-startup-vytalyou-raises-rs-9-cr-in-pre-series-a-round-12593640",
+      "publisher": "Entrackr",
+      "fetched_at": "2026-10-02T08:57:26+00:00"
+    }
+  ],
+  "confidence": 0.75
+}

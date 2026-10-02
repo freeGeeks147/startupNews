@@ -1,0 +1,44 @@
+{
+  "id": "aignosis-2026-10-01-seed",
+  "status": "pending",
+  "company_name": "Aignosis",
+  "company_slug": "aignosis",
+  "company_description": "AI-assisted autism and developmental screening platform using computer vision to analyze behavioral signals in children aged 16 months to 9 years.",
+  "city": "Jaipur",
+  "vertical": "healthtech",
+  "subsector": "ai-diagnostics",
+  "is_adjacent": false,
+  "announced_on": "2026-10-01",
+  "kind": "equity",
+  "stage": "seed",
+  "amount_inr": 40000000,
+  "amount_usd": 415239,
+  "currency_original": "INR",
+  "is_undisclosed": false,
+  "investors": [
+    {
+      "name": "Antler",
+      "is_lead": true
+    },
+    {
+      "name": "Nikhil Kamath",
+      "is_lead": true
+    },
+    {
+      "name": "Varun Dua",
+      "is_lead": false
+    },
+    {
+      "name": "IIMA Ventures",
+      "is_lead": false
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://entrackr.com/snippets/antler-nikhil-kamath-back-healthtech-startup-aignosis-with-rs-4-cr-seed-round-12611813",
+      "publisher": "Entrackr",
+      "fetched_at": "2026-10-02T08:55:26+00:00"
+    }
+  ],
+  "confidence": 0.95
+}
