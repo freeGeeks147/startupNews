@@ -194,90 +194,98 @@
   {
     "slug": "immuneel-therapeutics",
     "name": "Immuneel Therapeutics",
-    "website": null,
-    "city": "",
-    "founded_year": null,
+    "website": "https://immuneel.com/",
+    "city": "Bengaluru",
+    "founded_year": 2018,
     "vertical": "healthtech",
     "subsector": "biotech",
     "is_adjacent": false,
-    "description": "Lifesciences and biotech company developing immunological therapies"
+    "description": "Immuneel develops CAR-T cell therapies and other cell and gene therapies to treat cancer, with a focus on making advanced immunotherapies more affordable and accessible in India and emerging markets.",
+    "enriched_on": "2026-10-03"
   },
   {
     "slug": "inspecity",
     "name": "InspeCity",
-    "website": null,
-    "city": "",
-    "founded_year": null,
+    "website": "https://www.inspecity.com/",
+    "city": "Mumbai",
+    "founded_year": 2022,
     "vertical": "space-defence",
     "subsector": "satellites-eo",
     "is_adjacent": false,
-    "description": "Space technology company developing earth observation and satellite monitoring capabilities"
+    "description": "InspeCity develops autonomous in-orbit satellite servicing systems including propulsion, robotic manipulation, and refueling technologies. The company serves satellite operators and space agencies for satellite life extension and orbital debris mitigation.",
+    "enriched_on": "2026-10-03"
   },
   {
     "slug": "integra-robotics",
     "name": "Integra Robotics",
-    "website": null,
-    "city": "",
-    "founded_year": null,
+    "website": "https://www.integrarobotics.in/",
+    "city": "Bengaluru",
+    "founded_year": 2017,
     "vertical": "space-defence",
     "subsector": "drones",
     "is_adjacent": false,
-    "description": "Defence robotics company developing autonomous systems for defence applications"
+    "description": "Integra Robotics manufactures collaborative industrial robots and unmanned ground vehicles powered by AI and teleoperation systems, serving manufacturing, warehousing, security, and defence applications.",
+    "enriched_on": "2026-10-03"
   },
   {
     "slug": "kshatralabs",
     "name": "KshatraLabs",
-    "website": null,
-    "city": "",
-    "founded_year": null,
+    "website": "https://www.kshatralabs.in/",
+    "city": "Bengaluru",
+    "founded_year": 2025,
     "vertical": "space-defence",
     "subsector": "defence-electronics",
     "is_adjacent": false,
-    "description": "Defence electronics and technology company"
+    "description": "KshatraLabs develops autonomous aerial interceptor systems called HAWK that detect, pursue, and neutralize hostile drones and drone swarms at high speeds. The systems are designed for military defense and critical infrastructure protection.",
+    "enriched_on": "2026-10-03"
   },
   {
     "slug": "makr-microsystems",
     "name": "Makr Microsystems",
-    "website": null,
-    "city": "",
-    "founded_year": null,
+    "website": "https://makrmicro.com/",
+    "city": "Bengaluru",
+    "founded_year": 2024,
     "vertical": "semis-computing",
     "subsector": "chip-design",
     "is_adjacent": false,
-    "description": "Develops semiconductor and microelectronics technology"
+    "description": "Makr Microsystems develops nanoscale 3D subsurface metrology technology for semiconductor manufacturers using Acoustic Atomic Force Microscopy and optical tomography to inspect hidden structures and defects within chips at the nanometer scale without damaging them.",
+    "enriched_on": "2026-10-03"
   },
   {
     "slug": "mandrake-bio",
     "name": "Mandrake Bio",
-    "website": null,
-    "city": "",
-    "founded_year": null,
+    "website": "https://www.mandrake.bio/",
+    "city": "Bengaluru",
+    "founded_year": 2025,
     "vertical": "healthtech",
     "subsector": "biotech",
     "is_adjacent": false,
-    "description": "A biotech and lifescience company."
+    "description": "Designs AI-built gene-editing enzymes using computational protein design for agriculture and therapeutics, licensing them to seed and pharmaceutical companies.",
+    "enriched_on": "2026-10-03"
   },
   {
     "slug": "mowito",
     "name": "Mowito",
-    "website": null,
-    "city": "",
-    "founded_year": null,
+    "website": "https://www.mowito.ai/",
+    "city": "Bengaluru",
+    "founded_year": 2024,
     "vertical": "advanced-manufacturing",
     "subsector": "robotics",
     "is_adjacent": false,
-    "description": "A robotics company developing advanced IoT and hardware solutions"
+    "description": "Mowito develops AI software that enables standard industrial robot arms to learn and perform manufacturing tasks like precision assembly and machine tending by observing human operators on the factory floor.",
+    "enriched_on": "2026-10-03"
   },
   {
     "slug": "skyroot-aerospace",
     "name": "Skyroot Aerospace",
-    "website": null,
-    "city": "",
-    "founded_year": null,
+    "website": "https://www.skyroot.in/",
+    "city": "Hyderabad",
+    "founded_year": 2018,
     "vertical": "space-defence",
     "subsector": "launch",
     "is_adjacent": false,
-    "description": "Develops space launch vehicles for satellite and commercial space access."
+    "description": "Designs and manufactures on-demand space launch vehicles for deploying small satellites to orbit, offering both dedicated and rideshare launch options with custom orbital deployment capabilities.",
+    "enriched_on": "2026-10-03"
   },
   {
     "slug": "solarsquare",
