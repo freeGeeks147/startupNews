@@ -290,78 +290,119 @@
   {
     "slug": "solarsquare",
     "name": "SolarSquare",
-    "website": null,
-    "city": "",
-    "founded_year": null,
+    "website": "https://www.solarsquare.in/",
+    "city": "Mumbai",
+    "founded_year": 2015,
     "vertical": "energy-climate",
     "subsector": "solar-materials",
     "is_adjacent": false,
-    "description": "A solar energy company developing and deploying solar power systems and solutions"
+    "description": "SolarSquare designs and installs rooftop solar panel systems for residential homes, housing societies, and commercial entities. The company provides end-to-end services including design, installation, subsidy paperwork, financing, and maintenance.",
+    "enriched_on": "2026-10-04"
   },
   {
     "slug": "solinas-integrity",
     "name": "Solinas Integrity",
-    "website": null,
-    "city": "",
-    "founded_year": null,
+    "website": "https://solinas.in/",
+    "city": "Chennai",
+    "founded_year": 2018,
     "vertical": "advanced-manufacturing",
     "subsector": "robotics",
     "is_adjacent": false,
-    "description": "Develops advanced robotics solutions for industrial and government applications."
+    "description": "Develops robotic systems for inspecting and cleaning water and sewer pipelines, including crawler robots like Endobot and Homosep. Provides AI-powered analytics platform (SWASTH AI) for infrastructure asset management for municipalities and enterprise customers.",
+    "enriched_on": "2026-10-04"
   },
   {
     "slug": "starops",
     "name": "StarOps",
-    "website": null,
+    "website": "https://www.starops.in/",
     "city": "Bengaluru",
-    "founded_year": null,
+    "founded_year": 2022,
     "vertical": "space-defence",
     "subsector": "satellites-eo",
     "is_adjacent": false,
-    "description": "Spacecraft engineering and satellite development company"
+    "description": "Spacecraft engineering company that develops qualified satellite bus platforms across 50 kg, 150 kg, and 250 kg classes, with proprietary subsystem technologies and over 66% indigenisation of satellite systems.",
+    "enriched_on": "2026-10-04"
   },
   {
     "slug": "temple",
     "name": "Temple",
-    "website": null,
-    "city": "",
-    "founded_year": null,
+    "website": "https://temple.com/",
+    "city": "Gurugram",
+    "founded_year": 2024,
     "vertical": "healthtech",
     "subsector": "medical-devices",
     "is_adjacent": false,
-    "description": "Wearable medical device and longevity medicine startup"
+    "description": "A wearable device worn at the temple that continuously tracks cerebral blood flow and related neurological and metabolic markers, designed to monitor brain performance and health optimization.",
+    "enriched_on": "2026-10-04"
   },
   {
     "slug": "water-robotics",
     "name": "WATER Robotics",
-    "website": null,
-    "city": "",
-    "founded_year": null,
+    "website": "https://www.waterobots.com/",
+    "city": "Hyderabad",
+    "founded_year": 2024,
     "vertical": "advanced-manufacturing",
     "subsector": "robotics",
     "is_adjacent": false,
-    "description": "Robotics company developing robotic systems for commercial applications"
+    "description": "Develops robotic furniture with embedded sensors and actuators that adjust and respond to the human body in real time. Their flagship product, CAMA, is an adaptive bed designed for sleep and recovery.",
+    "enriched_on": "2026-10-04"
   },
   {
     "slug": "zoppler-systems",
     "name": "Zoppler Systems",
-    "website": null,
-    "city": "",
-    "founded_year": null,
+    "website": "https://www.zopplersystems.com/",
+    "city": "Bengaluru",
+    "founded_year": 2024,
     "vertical": "space-defence",
     "subsector": "defence-electronics",
     "is_adjacent": false,
-    "description": "Develops defence technology for commercial and government sectors."
+    "description": "Develops indigenous RF (radio frequency) sensing products and vendor-agnostic decision and autonomy platforms for defence and dual-use applications across airborne, ground, and naval systems.",
+    "enriched_on": "2026-10-04"
   },
   {
     "slug": "zumutor-biologics",
     "name": "Zumutor Biologics",
-    "website": null,
-    "city": "",
-    "founded_year": null,
+    "website": "https://zumutor.com/",
+    "city": "Bengaluru",
+    "founded_year": 2015,
     "vertical": "healthtech",
     "subsector": "biotech",
     "is_adjacent": false,
-    "description": "A biotechnology company developing biopharmaceutical and biological products"
+    "description": "Zumutor Biologics develops immunotherapies that activate natural killer (NK) cells to attack tumors, with a focus on NK cell checkpoint inhibitors. The company's lead candidate ZM008 is a first-in-class monoclonal antibody designed to unlock innate immune responses against cancer.",
+    "enriched_on": "2026-10-04"
+  },
+  {
+    "slug": "aignosis",
+    "name": "Aignosis",
+    "website": "https://aignosis.in/",
+    "city": "Jaipur",
+    "founded_year": 2024,
+    "vertical": "healthtech",
+    "subsector": "ai-diagnostics",
+    "is_adjacent": false,
+    "description": "Aignosis is an AI-assisted autism and developmental screening platform that uses computer vision to analyze behavioral signals such as eye gaze and facial expression responses in children aged 16 months to 9 years. The system uses standard laptops and webcams to generate risk reports indicating whether further clinical assessment may be needed.",
+    "enriched_on": "2026-10-04"
+  },
+  {
+    "slug": "pixxel",
+    "name": "Pixxel",
+    "website": null,
+    "city": "",
+    "founded_year": null,
+    "vertical": "space-defence",
+    "subsector": "satellites-eo",
+    "is_adjacent": false,
+    "description": "Spacetech company developing satellite technology"
+  },
+  {
+    "slug": "sarla-aviation",
+    "name": "Sarla Aviation",
+    "website": null,
+    "city": "",
+    "founded_year": null,
+    "vertical": "space-defence",
+    "subsector": "drones",
+    "is_adjacent": false,
+    "description": "Develops aerial vehicle technology for B2B applications"
   }
 ]

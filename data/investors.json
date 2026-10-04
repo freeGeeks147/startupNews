@@ -403,5 +403,25 @@
     "slug": "raj-dandu",
     "name": "Raj Dandu",
     "type": "vc"
+  },
+  {
+    "slug": "nikhil-kamath",
+    "name": "Nikhil Kamath",
+    "type": "vc"
+  },
+  {
+    "slug": "varun-dua",
+    "name": "Varun Dua",
+    "type": "vc"
+  },
+  {
+    "slug": "iima-ventures",
+    "name": "IIMA Ventures",
+    "type": "vc"
+  },
+  {
+    "slug": "indigo-ventures",
+    "name": "IndiGo Ventures",
+    "type": "vc"
   }
 ]

@@ -1051,5 +1051,91 @@
     ],
     "reviewed": false,
     "note": null
+  },
+  {
+    "id": "aignosis-2026-10-01-seed",
+    "company": "aignosis",
+    "announced_on": "2026-10-01",
+    "kind": "equity",
+    "stage": "seed",
+    "amount_inr": 40000000,
+    "amount_usd": 415239,
+    "currency_original": "INR",
+    "is_undisclosed": false,
+    "investors": [
+      {
+        "slug": "antler",
+        "is_lead": true
+      },
+      {
+        "slug": "nikhil-kamath",
+        "is_lead": true
+      },
+      {
+        "slug": "varun-dua",
+        "is_lead": false
+      },
+      {
+        "slug": "iima-ventures",
+        "is_lead": false
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://entrackr.com/snippets/antler-nikhil-kamath-back-healthtech-startup-aignosis-with-rs-4-cr-seed-round-12611813",
+        "publisher": "Entrackr"
+      },
+      {
+        "url": "https://inc42.com/buzz/from-simple-energy-to-arivihan-indian-startups-raised-over-233-mn-this-week/",
+        "publisher": "Inc42"
+      }
+    ],
+    "reviewed": false,
+    "note": null
+  },
+  {
+    "id": "pixxel-2026-10-01-A",
+    "company": "pixxel",
+    "announced_on": "2026-10-01",
+    "kind": "equity",
+    "stage": "A",
+    "amount_inr": 9633000000,
+    "amount_usd": 100000000,
+    "currency_original": "USD",
+    "is_undisclosed": false,
+    "investors": [],
+    "sources": [
+      {
+        "url": "https://entrackr.com/report/quarterly-funding-report/indian-startups-raise-29-bn-in-q3-2026-as-ev-ai-drive-funding-12612860",
+        "publisher": "Entrackr"
+      }
+    ],
+    "reviewed": false,
+    "note": null
+  },
+  {
+    "id": "sarla-aviation-2026-04-16-unknown",
+    "company": "sarla-aviation",
+    "announced_on": "2026-04-16",
+    "kind": "equity",
+    "stage": "unknown",
+    "amount_inr": 102564000,
+    "amount_usd": 1100000,
+    "currency_original": "USD",
+    "is_undisclosed": false,
+    "investors": [
+      {
+        "slug": "indigo-ventures",
+        "is_lead": true
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://inc42.com/buzz/from-hosteller-to-gobblecube-indian-startups-raised-60-mn-this-week/",
+        "publisher": "Inc42 Funding Galore"
+      }
+    ],
+    "reviewed": false,
+    "note": null
   }
 ]
