@@ -386,23 +386,25 @@
   {
     "slug": "pixxel",
     "name": "Pixxel",
-    "website": null,
-    "city": "",
-    "founded_year": null,
+    "website": "https://www.pixxel.space/",
+    "city": "Bengaluru",
+    "founded_year": 2019,
     "vertical": "space-defence",
     "subsector": "satellites-eo",
     "is_adjacent": false,
-    "description": "Spacetech company developing satellite technology"
+    "description": "Pixxel develops hyperspectral imaging satellites and software (Aurora platform) to process satellite imagery for earth observation. The company serves agriculture, energy, environmental monitoring, mining, and government sectors.",
+    "enriched_on": "2026-10-05"
   },
   {
     "slug": "sarla-aviation",
     "name": "Sarla Aviation",
-    "website": null,
-    "city": "",
+    "website": "https://www.sarla-aviation.com/",
+    "city": "Bengaluru",
     "founded_year": null,
     "vertical": "space-defence",
     "subsector": "drones",
     "is_adjacent": false,
-    "description": "Develops aerial vehicle technology for B2B applications"
+    "description": "Develops electric vertical takeoff and landing (eVTOL) aircraft for urban air mobility. Their primary product, Shunya, is a six-seat flying taxi designed for urban transportation with hybrid-electric propulsion.",
+    "enriched_on": "2026-10-05"
   }
 ]
